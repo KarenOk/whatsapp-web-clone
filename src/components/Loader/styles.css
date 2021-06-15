@@ -34,7 +34,7 @@
     max-width: 400px;
     height: 4px;
     width: 90%;
-    margin: 20px auto;
+    margin: 20px auto 30px;
     background: rgb(230, 230, 230);
     position: relative;
 }
