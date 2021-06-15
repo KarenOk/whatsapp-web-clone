@@ -1,0 +1,7 @@
+.underline {
+    text-decoration: underline;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}

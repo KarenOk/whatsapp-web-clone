@@ -1,8 +1,135 @@
 .sidebar {
-    background: rgb(237, 237, 237);
     min-width: 300px;
     flex: 40%;
-    border-right: 1px solid rgba(74, 74, 74, 0.08);
+    border-right: 1px solid #DADADA;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__header {
+    background: rgb(237, 237, 237);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+}
+
+.sidebar__avatar-wrapper {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar__avatar {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sidebar__actions {
+    margin-right: 20px;
+}
+
+.sidebar__action {
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.sidebar__action-icon {
+    color: rgb(145, 145, 145);
+}
+
+.sidebar__alert {
+    height: 85px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__alert--warning {
+    background: #FED859;
+}
+
+.sidebar__alert--info {
+    background: #9DE1FE;
+}
+
+.sidebar__alert--danger {
+    background: #F3645B;
+}
+
+.sidebar__alert-icon-wrapper {
+    margin-right: 10px;
+}
+
+.sidebar__alert-icon {
+    color: white;
+}
+
+.sidebar__alert-texts {
+    flex: 1;
+}
+
+.sidebar__alert-text:first-of-type {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #343738;
+}
+
+.sidebar__alert-text:last-of-type {
+    font-size: 0.85rem;
+    color: #414A4E;
+    line-height: 17px;
+}
+
+.sidebar__alert--danger .sidebar__alert-text:first-of-type, .sidebar__alert--danger .sidebar__alert-text:last-of-type {
+    color: white;
+}
+
+.sidebar__search-wrapper {
+    padding: 7px 10px;
+    height: 50px;
+    background: #F6F6F6;
+    position: relative;
+}
+
+.sidebar__search-wrapper:focus-within {
+    background: white;
+}
+
+.sidebar__search {
+    background: white;
+    color: rgb(74, 74, 74);
+    padding-left: 60px;
+    border-radius: 18px;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar__search::placeholder {
+    color: rgb(153, 153, 153);
+}
+
+.sidebar__search-icon {
+    color: #919191;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar__contacts {
+    flex: 1;
+    overflow-y: scroll;
+    background: #F5F5F5;
+    border-top: 1px solid #DADADA;
+}
+
+.sidebar__contacts p {
+    height: 100vh;
+    width: 100%;
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1300px) {
