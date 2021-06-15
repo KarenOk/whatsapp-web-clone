@@ -7,11 +7,11 @@
     align-items: center;
 }
 
-.loader__main-icon-wrapper {
+.loader__logo-wrapper {
     position: relative;
 }
 
-.loader__main-icon-wrapper::after {
+.loader__logo-wrapper::after {
     content: "";
     position: absolute;
     left: -100px;
@@ -22,7 +22,7 @@
     animation: glisten 2s ease-in 0.8s infinite;
 }
 
-.loader__main-icon {
+.loader__logo {
     z-index: 3;
     fill: rgb(191, 191, 191);
     width: 60px;
@@ -64,7 +64,7 @@
     font-size: 0.85rem;
 }
 
-.loader__lock-icon {
+.loader__icon {
     margin-right: 5px;
 }
 
