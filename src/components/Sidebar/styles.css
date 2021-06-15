@@ -1,0 +1,24 @@
+.sidebar {
+    background: rgb(237, 237, 237);
+    min-width: 300px;
+    flex: 40%;
+    border-right: 1px solid rgba(74, 74, 74, 0.08);
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+    .sidebar {
+        flex: 35%;
+    }
+    .sidebar~div {
+        flex: 65%;
+    }
+}
+
+@media screen and (min-width: 1301px) {
+    .sidebar {
+        flex: 30%;
+    }
+    .sidebar~div {
+        flex: 70%;
+    }
+}

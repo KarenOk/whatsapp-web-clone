@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
+import Sidebar from "components/Sidebar";
 
 function App() {
 	const [appLoaded, setAppLoaded] = useState(false);
@@ -17,11 +19,14 @@ function App() {
 
 	return (
 		<div className="app">
-			<Router>
-				<Switch>
-					<Route path="/" component={Home} />
-				</Switch>
-			</Router>
+			<div className="app-content">
+				<Sidebar />
+				<Router>
+					<Switch>
+						<Route path="/" component={Home} />
+					</Switch>
+				</Router>
+			</div>
 		</div>
 	);
 }
