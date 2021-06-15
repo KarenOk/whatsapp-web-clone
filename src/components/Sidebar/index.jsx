@@ -26,7 +26,7 @@ const alerts = [
 	</div>,
 	<div className="sidebar__alert sidebar__alert--warning">
 		<div className="sidebar__alert-icon-wrapper">
-			<Icon id="notification" className="sidebar__alert-icon" />
+			<Icon id="noWifi" className="sidebar__alert-icon" />
 		</div>
 		<div className="sidebar__alert-texts">
 			<p className="sidebar__alert-text"> Phone Not Connected</p>
