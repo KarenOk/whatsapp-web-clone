@@ -77,7 +77,32 @@ const Sidebar = () => {
 				/>
 			</div>
 			<div className="sidebar__contacts">
-				<p> Coming soon</p>
+				<div className="sidebar-contact">
+					<div className="sidebar-contact__avatar-wrapper">
+						<img src={avatar} alt="Karen Okonkwo" className="sidebar__avatar" />
+					</div>
+					<div className="sidebar-contact__content">
+						<div className="sidebar-contact__top-content">
+							<h2 className="sidebar-contact__name"> Karen Okonkwo </h2>
+							<span className="sidebar-contact__time"> 02:45 </span>
+						</div>
+						<div className="sidebar-contact__bottom-content">
+							<p className="sidebar-contact__message">
+								Some random text content to fill in the message space{" "}
+							</p>
+							<div className="sidebar-contact__icons">
+								<Icon id="pinned" className="sidebar-contact__icon" />
+								<span className="sidebar-contact__unread">22 </span>
+								<button aria-label="sidebar-contact__btn">
+									<Icon
+										id="downArrow"
+										className="sidebar-contact__icon sidebar-contact__icon--dropdown"
+									/>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</aside>
 	);

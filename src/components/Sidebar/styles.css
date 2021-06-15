@@ -127,9 +127,92 @@
     border-top: 1px solid #DADADA;
 }
 
-.sidebar__contacts p {
-    height: 100vh;
-    width: 100%;
+.sidebar-contact {
+    height: 72px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #EBEBEB;
+    cursor: pointer;
+}
+
+.sidebar-contact:hover {
+    background-color: #EBEBEB;
+}
+
+.sidebar-contact__avatar-wrapper {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.sidebar-contact__content {
+    overflow: hidden;
+    flex: 1;
+}
+
+.sidebar-contact__top-content, .sidebar-contact__bottom-content {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-contact__name, .sidebar-contact__message {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sidebar-contact__top-content {
+    margin-bottom: 2px;
+}
+
+.sidebar-contact__name {
+    color: #000000;
+    font-size: 1rem;
+}
+
+.sidebar-contact__time {
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.sidebar-contact__message {
+    color: #00000099;
+    font-size: 0.85rem;
+    margin-right: 3px;
+}
+
+.sidebar-contact__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(24px);
+    transition: transform 0.5s ease;
+}
+
+.sidebar-contact:hover .sidebar-contact__icons {
+    transform: translateX(0);
+}
+
+.sidebar-contact__icons>* {
+    margin-left: 8px;
+    color: #B3B3B3;
+}
+
+.sidebar-contact__unread {
+    display: inline-block;
+    color: white;
+    background-color: rgb(6, 215, 85);
+    border-radius: 18px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 3px;
+    line-height: 18px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 500;
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1300px) {
