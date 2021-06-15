@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Loader from "./components/Loader";
+import Home from "./pages/Home";
 
 function App() {
 	const [appLoaded, setAppLoaded] = useState(false);
@@ -11,9 +13,15 @@ function App() {
 
 	const stopLoad = () => setAppLoaded(true);
 
+	if (!appLoaded) return <Loader done={appLoaded} />;
+
 	return (
 		<div className="app">
-			<Loader done={appLoaded} />
+			<Router>
+				<Switch>
+					<Route path="/" component={Home} />
+				</Switch>
+			</Router>
 		</div>
 	);
 }
