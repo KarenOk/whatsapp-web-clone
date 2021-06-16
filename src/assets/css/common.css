@@ -17,3 +17,76 @@
 .focus-visible {
     outline-color: rgba(129, 202, 231, 0.3);
 }
+
+.header {
+    background: rgb(237, 237, 237);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px;
+}
+
+.search-wrapper {
+    padding: 7px 10px;
+    height: 50px;
+    background: #F6F6F6;
+    position: relative;
+}
+
+.search-wrapper:focus-within {
+    background: white;
+}
+
+.search {
+    background: white;
+    color: rgb(74, 74, 74);
+    padding-left: 60px;
+    border-radius: 18px;
+    width: 100%;
+    height: 100%;
+}
+
+.search::placeholder {
+    color: rgb(153, 153, 153);
+}
+
+.search-icons {
+    color: #919191;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+}
+
+.search-icon, .search__back-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s ease;
+}
+
+.search-icon {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+.search__back-btn {
+    opacity: 0;
+    transition-delay: 0.3s;
+    color: rgb(51, 183, 246);
+}
+
+.search-wrapper:focus-within .search-icon {
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.search-wrapper:focus-within .search__back-btn {
+    transform: rotate(360deg);
+    opacity: 1;
+    transition-delay: 0s;
+}

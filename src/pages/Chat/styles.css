@@ -1,24 +1,22 @@
 .chat {
+    display: flex;
+    position: relative;
+}
+
+.chat__body {
     min-width: 300px;
     flex: 40%;
     border-right: 1px solid #DADADA;
     display: flex;
     flex-direction: column;
-}
-
-.chat__header {
-    background: rgb(237, 237, 237);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding: 10px;
+    position: relative;
 }
 
 .chat__avatar-wrapper {
     width: 40px;
     height: 40px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .chat__avatar {
@@ -30,6 +28,7 @@
 
 .chat__contact-wrapper {
     flex: 1;
+    cursor: pointer;
 }
 
 .chat__contact-name, .chat__contact-desc {
@@ -258,4 +257,58 @@
 .chat__input::placeholder {
     color: rgb(153, 153, 153);
     font-size: 0.9rem;
+}
+
+.chat-sidebar {
+    width: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.1s ease;
+    overflow: hidden;
+    /* position: absolute; */
+}
+
+.chat-sidebar--active {
+    flex: 30%;
+}
+
+.chat-sidebar__header-icon {
+    margin-right: 20px;
+    color: rgb(145, 145, 145);
+}
+
+.chat-sidebar__heading {
+    flex: 1;
+    color: #000000;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.chat-sidebar__content {
+    flex: 1;
+}
+
+.chat-sidebar__search-results {
+    background: white;
+    height: 100%;
+    padding-top: 5pc;
+    color: #00000099;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .chat-sidebar {
+        transition: transform 0.1s ease;
+        transform: translateX(120vw);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .chat-sidebar--active {
+        transform: translateX(0);
+        transition: transform 0.1s ease;
+    }
 }

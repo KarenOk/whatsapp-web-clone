@@ -9,7 +9,7 @@ import contacts from "data/contacts";
 const Sidebar = () => {
 	return (
 		<aside className="sidebar">
-			<header className="sidebar__header">
+			<header className="header">
 				<div className="sidebar__avatar-wrapper">
 					<img src={avatar} alt="Karen Okonkwo" className="sidebar__avatar" />
 				</div>
@@ -29,12 +29,14 @@ const Sidebar = () => {
 				</div>
 			</header>
 			<Alert />
-			<div className="sidebar__search-wrapper">
-				<Icon id="back" className="sidebar__search-icon" />
-				<input
-					className="sidebar__search"
-					placeholder="Search or start a new chat"
-				/>
+			<div className="search-wrapper">
+				<div className="search-icons">
+					<Icon id="search" className="search-icon" />
+					<button className="search__back-btn">
+						<Icon id="back" />
+					</button>
+				</div>
+				<input className="search" placeholder="Search or start a new chat" />
 			</div>
 			<div className="sidebar__contacts">
 				{contacts.map((contact, index) => (

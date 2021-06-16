@@ -6,15 +6,6 @@
     flex-direction: column;
 }
 
-.sidebar__header {
-    background: rgb(237, 237, 237);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding: 10px;
-}
-
 .sidebar__avatar-wrapper {
     width: 40px;
     height: 40px;
@@ -93,31 +84,6 @@
     height: 50px;
     background: #F6F6F6;
     position: relative;
-}
-
-.sidebar__search-wrapper:focus-within {
-    background: white;
-}
-
-.sidebar__search {
-    background: white;
-    color: rgb(74, 74, 74);
-    padding-left: 60px;
-    border-radius: 18px;
-    width: 100%;
-    height: 100%;
-}
-
-.sidebar__search::placeholder {
-    color: rgb(153, 153, 153);
-}
-
-.sidebar__search-icon {
-    color: #919191;
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 .sidebar__contacts {
