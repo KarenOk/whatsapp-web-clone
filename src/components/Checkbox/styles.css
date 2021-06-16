@@ -1,0 +1,26 @@
+.checkbox__input {
+    position: fixed;
+    opacity: 0;
+    width: 0;
+}
+
+.checkbox__label {
+    display: inline-block;
+    border: 2px solid rgb(145, 145, 145);
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkbox__input:checked~.checkbox__label {
+    background-color: #009688;
+    border: 2px solid #009688;
+}
+
+.checkbox__icon {
+    width: 92%;
+    height: 100%;
+}

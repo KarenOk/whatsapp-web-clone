@@ -23,6 +23,10 @@ button, input {
     background-color: transparent;
 }
 
+ul {
+    list-style: none;
+}
+
 ::-webkit-scrollbar {
     width: 6px!important;
     height: 6px!important;

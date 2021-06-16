@@ -5,6 +5,8 @@ import ChatInput from "./ChatInput";
 import Header from "./Header";
 import ChatSidebar from "./ChatSidebar";
 import Icon from "components/Icon";
+import Search from "./Search";
+import Profile from "./Profile";
 
 const Chat = () => {
 	const [showAttach, setShowAttach] = useState(false);
@@ -31,10 +33,21 @@ const Chat = () => {
 					/>
 				</footer>
 			</div>
-			<ChatSidebar
+			{/* <ChatSidebar
+				heading="Search Messages"
 				active={showSidebar}
 				closeSidebar={() => setShowSidebar(false)}
-			/>
+			>
+				<Search/>
+			</ChatSidebar> */}
+
+			<ChatSidebar
+				heading="Contact Info"
+				active={showSidebar}
+				closeSidebar={() => setShowSidebar(false)}
+			>
+				<Profile />
+			</ChatSidebar>
 		</div>
 	);
 };

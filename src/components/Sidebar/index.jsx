@@ -11,7 +11,7 @@ const Sidebar = () => {
 		<aside className="sidebar">
 			<header className="header">
 				<div className="sidebar__avatar-wrapper">
-					<img src={avatar} alt="Karen Okonkwo" className="sidebar__avatar" />
+					<img src={avatar} alt="Karen Okonkwo" className="avatar" />
 				</div>
 				<div className="sidebar__actions">
 					<button className="sidebar__action" aria-label="Status">

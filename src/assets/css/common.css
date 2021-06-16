@@ -10,6 +10,16 @@
     position: relative;
 }
 
+.sb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-1 {
+    flex: 1
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
 }
@@ -26,6 +36,15 @@
     height: 60px;
     padding: 10px;
 }
+
+.avatar {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Begin search input  */
 
 .search-wrapper {
     padding: 7px 10px;
@@ -90,3 +109,5 @@
     opacity: 1;
     transition-delay: 0s;
 }
+
+/* End search input  */

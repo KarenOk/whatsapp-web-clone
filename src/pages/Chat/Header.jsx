@@ -6,7 +6,7 @@ const Header = ({ openSidebar }) => {
 	return (
 		<header className="header">
 			<div className="chat__avatar-wrapper" onClick={openSidebar}>
-				<img src={avatar} alt="Karen Okonkwo" className="chat__avatar" />
+				<img src={avatar} alt="Karen Okonkwo" className="avatar" />
 			</div>
 
 			<div className="chat__contact-wrapper" onClick={openSidebar}>
