@@ -43,16 +43,16 @@ const Contact = ({ contact }) => {
 						)}
 						<span
 							className={`sidebar-contact__message ${
-								lastMessage?.status === "read"
-									? "sidebar-contact__message--unread"
-									: ""
+								!!contact.unread ? "sidebar-contact__message--unread" : ""
 							}`}
 						>
 							{lastMessage?.content}
 						</span>
 					</p>
 					<div className="sidebar-contact__icons">
-						<Icon id="pinned" className="sidebar-contact__icon" />
+						{contact.pinned && (
+							<Icon id="pinned" className="sidebar-contact__icon" />
+						)}
 						{!!contact.unread && (
 							<span className="sidebar-contact__unread">{contact.unread}</span>
 						)}

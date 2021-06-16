@@ -88,12 +88,6 @@ const users = [
 					time: "09:11:26",
 					status: null,
 				},
-				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
-					sender: null,
-					time: "09:15:45",
-					status: "delivered",
-				},
 			],
 		},
 		group: false,
@@ -183,7 +177,7 @@ const users = [
 			],
 		},
 		group: false,
-		pinned: true,
+		pinned: false,
 	},
 	{
 		id: 1,
@@ -275,7 +269,7 @@ const users = [
 			],
 		},
 		group: false,
-		pinned: true,
+		pinned: false,
 	},
 	{
 		id: 4,
@@ -379,7 +373,7 @@ const users = [
 			],
 		},
 		group: false,
-		pinned: true,
+		pinned: false,
 	},
 
 	{
@@ -472,7 +466,7 @@ const users = [
 			],
 		},
 		group: false,
-		pinned: true,
+		pinned: false,
 	},
 	{
 		id: 6,
@@ -576,7 +570,7 @@ const users = [
 			],
 		},
 		group: false,
-		pinned: true,
+		pinned: false,
 	},
 
 	{
@@ -669,7 +663,7 @@ const users = [
 			],
 		},
 		group: false,
-		pinned: true,
+		pinned: false,
 	},
 
 	{
@@ -762,7 +756,7 @@ const users = [
 			],
 		},
 		group: false,
-		pinned: true,
+		pinned: false,
 	},
 ];
 
