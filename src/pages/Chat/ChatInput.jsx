@@ -1,6 +1,14 @@
 import React from "react";
 import Icon from "components/Icon";
 
+const attachButtons = [
+	{ icon: "attachRooms", label: "Choose room" },
+	{ icon: "attachContacts", label: "Choose contact" },
+	{ icon: "attachDocument", label: "Choose document" },
+	{ icon: "attachCamera", label: "Use camera" },
+	{ icon: "attachImage", label: "Choose image" },
+];
+
 const ChatInput = ({
 	showAttach,
 	setShowAttach,
@@ -24,10 +32,10 @@ const ChatInput = ({
 			</button>
 			{showEmojis && (
 				<>
-					<button aria-label="GIF">
+					<button aria-label="Choose GIF">
 						<Icon id="gif" className="chat__input-icon" />
 					</button>
-					<button aria-label="Stickers">
+					<button aria-label="Choose sticker">
 						<Icon id="sticker" className="chat__input-icon" />
 					</button>
 				</>
@@ -45,21 +53,15 @@ const ChatInput = ({
 				<div
 					className={`chat__attach ${showAttach ? "chat__attach--active" : ""}`}
 				>
-					<button className="chat__attach-btn" aria-label="Choose room">
-						<Icon id="attachRooms" className="chat__attach-icon" />
-					</button>
-					<button className="chat__attach-btn" aria-label="Choose contact">
-						<Icon id="attachContacts" className="chat__attach-icon" />
-					</button>
-					<button className="chat__attach-btn" aria-label="Choose document">
-						<Icon id="attachDocument" className="chat__attach-icon" />
-					</button>
-					<button className="chat__attach-btn" aria-label="Use camera">
-						<Icon id="attachCamera" className="chat__attach-icon" />
-					</button>
-					<button className="chat__attach-btn" aria-label="Choose image">
-						<Icon id="attachImage" className="chat__attach-icon" />
-					</button>
+					{attachButtons.map((btn) => (
+						<button
+							className="chat__attach-btn"
+							aria-label={btn.label}
+							key={btn.label}
+						>
+							<Icon id={btn.icon} className="chat__attach-icon" />
+						</button>
+					))}
 				</div>
 			</div>
 			<input className="chat__input" placeholder="Type a message" />
