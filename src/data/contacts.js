@@ -180,7 +180,7 @@ const users = [
 		pinned: false,
 	},
 	{
-		id: 1,
+		id: 3,
 		profile_picture: ppGirl3,
 		name: "Titilayo Bello",
 		phone_number: "+2348123456789",
