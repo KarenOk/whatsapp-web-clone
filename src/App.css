@@ -9,6 +9,7 @@
     width: 100%;
     height: 120px;
     top: 0;
+    left: 0;
     background: rgb(0, 150, 136);
     position: absolute;
     content: "";
