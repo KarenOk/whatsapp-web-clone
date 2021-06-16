@@ -4,30 +4,36 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Loader from "./components/Loader";
 import Home from "./pages/Home";
 import Sidebar from "components/Sidebar";
+import Chat from "pages/Chat";
 
 function App() {
 	const [appLoaded, setAppLoaded] = useState(false);
+	const [startLoadProgress, setStartLoadProgress] = useState(false);
 
 	useEffect(() => {
 		window.addEventListener("load", stopLoad);
 		return () => window.removeEventListener("load", stopLoad);
 	}, []);
 
-	const stopLoad = () => setAppLoaded(true);
+	const stopLoad = () => {
+		setStartLoadProgress(true);
+		setTimeout(() => setAppLoaded(true), 3000);
+	};
 
-	if (!appLoaded) return <Loader done={appLoaded} />;
+	if (!appLoaded) return <Loader done={startLoadProgress} />;
 
 	return (
 		<div className="app">
 			<p className="app__mobile-message"> Only available on desktop 😊. </p>
-			<div className="app-content">
-				<Sidebar />
-				<Router>
+			<Router>
+				<div className="app-content">
+					<Sidebar />
 					<Switch>
-						<Route path="/" component={Home} />
+						<Route path="/chat/:id" component={Chat} />
+						<Route component={Home} />
 					</Switch>
-				</Router>
-			</div>
+				</div>
+			</Router>
 		</div>
 	);
 }
