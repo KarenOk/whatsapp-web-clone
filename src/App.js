@@ -19,6 +19,7 @@ function App() {
 
 	return (
 		<div className="app">
+			<p className="app__mobile-message"> Only available on desktop 😊. </p>
 			<div className="app-content">
 				<Sidebar />
 				<Router>
