@@ -12,6 +12,8 @@
     position: relative;
 }
 
+/* Chat Header Component  */
+
 .chat__avatar-wrapper {
     width: 40px;
     height: 40px;
@@ -62,6 +64,10 @@
     height: 30px;
 }
 
+/* End Chat Header Component  */
+
+/* Chat Content */
+
 .chat__content {
     flex: 1;
     position: relative;
@@ -92,9 +98,13 @@
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2)
 }
 
+/* End Chat Content */
+
 .chat__footer {
     background: rgb(240, 240, 240);
 }
+
+/* Emoji Tray */
 
 .emojis__wrapper {
     width: 100%;
@@ -185,6 +195,10 @@
     font-size: 200%;
 }
 
+/* End Emoji Tray */
+
+/* Chat Footer Toolbar */
+
 .chat__input-wrapper {
     padding: 10px;
     height: 60px;
@@ -266,6 +280,10 @@
     color: rgb(153, 153, 153);
     font-size: 0.9rem;
 }
+
+/* End Chat Footer Toolbar */
+
+/* Chat Sidebar */
 
 .chat-sidebar {
     width: 0;
@@ -466,6 +484,8 @@
 .profile__danger-text {
     flex: 1;
 }
+
+/* End  Chat Sidebar */
 
 @media screen and (max-width: 1000px) {
     .chat-sidebar {

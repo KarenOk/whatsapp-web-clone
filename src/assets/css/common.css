@@ -35,6 +35,8 @@
     align-items: center;
     height: 60px;
     padding: 10px;
+    /* Fix for height bug with chat sidebar */
+    min-height: 60px;
 }
 
 .avatar {

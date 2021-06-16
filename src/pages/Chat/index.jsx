@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./styles.css";
-import EmojiTray from "./EmojiTray";
-import ChatInput from "./ChatInput";
-import Header from "./Header";
-import ChatSidebar from "./ChatSidebar";
+import EmojiTray from "./components/EmojiTray";
+import ChatInput from "./components/ChatInput";
+import Header from "./components/Header";
+import ChatSidebar from "./components/ChatSidebar";
 import Icon from "components/Icon";
-import Search from "./Search";
-import Profile from "./Profile";
+import Search from "./components/Search";
+import Profile from "./components/Profile";
 
 const Chat = () => {
 	const [showAttach, setShowAttach] = useState(false);
@@ -38,7 +38,7 @@ const Chat = () => {
 				active={showSidebar}
 				closeSidebar={() => setShowSidebar(false)}
 			>
-				<Search/>
+				<Search />
 			</ChatSidebar> */}
 
 			<ChatSidebar

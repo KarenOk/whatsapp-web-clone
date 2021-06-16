@@ -6,6 +6,8 @@
     flex-direction: column;
 }
 
+/*  Sidebar Header */
+
 .sidebar__avatar-wrapper {
     width: 40px;
     height: 40px;
@@ -24,6 +26,10 @@
 .sidebar__action-icon {
     color: rgb(145, 145, 145);
 }
+
+/* End Sidebar Header */
+
+/*  Sidebar Alert */
 
 .sidebar__alert {
     height: 85px;
@@ -72,12 +78,20 @@
     color: white;
 }
 
+/* End Sidebar Alert */
+
+/*  Sidebar Search */
+
 .sidebar__search-wrapper {
     padding: 7px 10px;
     height: 50px;
     background: #F6F6F6;
     position: relative;
 }
+
+/* End Sidebar Search */
+
+/*  Sidebar Contact List */
 
 .sidebar__contacts {
     flex: 1;
@@ -190,6 +204,8 @@
     font-size: 0.75rem;
     font-weight: 500;
 }
+
+/*  End Sidebar Contact List */
 
 @media screen and (min-width: 1000px) and (max-width: 1300px) {
     .sidebar {
