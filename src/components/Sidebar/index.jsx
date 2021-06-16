@@ -1,50 +1,10 @@
 import React from "react";
 import "./styles.css";
-import avatar from "assets/images/profile-picture.jpeg";
+import avatar from "assets/images/profile-picture-girl-1.jpeg";
 import Icon from "components/Icon";
-
-const alerts = [
-	<div className="sidebar__alert sidebar__alert--info">
-		<div className="sidebar__alert-icon-wrapper">
-			<Icon id="notification" className="sidebar__alert-icon" />
-		</div>
-		<div className="sidebar__alert-texts">
-			<p className="sidebar__alert-text"> Get notified of new messages </p>
-			<p className="sidebar__alert-text"> Turn on your notifications </p>
-		</div>
-	</div>,
-	<div className="sidebar__alert sidebar__alert--danger">
-		<div className="sidebar__alert-icon-wrapper">
-			<Icon id="notification" className="sidebar__alert-icon" />
-		</div>
-		<div className="sidebar__alert-texts">
-			<p className="sidebar__alert-text"> Phone battery low </p>
-			<p className="sidebar__alert-text">
-				Charge your phone to keep using Whatsapp.
-			</p>
-		</div>
-	</div>,
-	<div className="sidebar__alert sidebar__alert--warning">
-		<div className="sidebar__alert-icon-wrapper">
-			<Icon id="noWifi" className="sidebar__alert-icon" />
-		</div>
-		<div className="sidebar__alert-texts">
-			<p className="sidebar__alert-text"> Phone Not Connected</p>
-			<p className="sidebar__alert-text">
-				Make sure your phone has an active internet connection.{" "}
-				<a
-					className="underline"
-					href="https://faq.whatsapp.com/web/troubleshooting/cant-connect-to-whatsapp-web-or-desktop/"
-					target="_blank"
-				>
-					{" "}
-					Learn more.{" "}
-				</a>
-			</p>
-		</div>
-	</div>,
-];
-const randomAlert = alerts.sort(() => 0.5 - Math.random())[0];
+import Alert from "./Alert";
+import Contact from "./Contact";
+import contacts from "data/contacts";
 
 const Sidebar = () => {
 	return (
@@ -68,7 +28,7 @@ const Sidebar = () => {
 					</button>
 				</div>
 			</header>
-			{randomAlert}
+			<Alert />
 			<div className="sidebar__search-wrapper">
 				<Icon id="back" className="sidebar__search-icon" />
 				<input
@@ -77,32 +37,9 @@ const Sidebar = () => {
 				/>
 			</div>
 			<div className="sidebar__contacts">
-				<div className="sidebar-contact">
-					<div className="sidebar-contact__avatar-wrapper">
-						<img src={avatar} alt="Karen Okonkwo" className="sidebar__avatar" />
-					</div>
-					<div className="sidebar-contact__content">
-						<div className="sidebar-contact__top-content">
-							<h2 className="sidebar-contact__name"> Karen Okonkwo </h2>
-							<span className="sidebar-contact__time"> 02:45 </span>
-						</div>
-						<div className="sidebar-contact__bottom-content">
-							<p className="sidebar-contact__message">
-								Some random text content to fill in the message space{" "}
-							</p>
-							<div className="sidebar-contact__icons">
-								<Icon id="pinned" className="sidebar-contact__icon" />
-								<span className="sidebar-contact__unread">22 </span>
-								<button aria-label="sidebar-contact__btn">
-									<Icon
-										id="downArrow"
-										className="sidebar-contact__icon sidebar-contact__icon--dropdown"
-									/>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
+				{contacts.map((contact, index) => (
+					<Contact key={index} contact={contact} />
+				))}
 			</div>
 		</aside>
 	);

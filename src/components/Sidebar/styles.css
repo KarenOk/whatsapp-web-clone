@@ -151,7 +151,7 @@
     flex: 1;
 }
 
-.sidebar-contact__top-content, .sidebar-contact__bottom-content {
+.sidebar-contact__top-content, .sidebar-contact__bottom-content, .sidebar-contact__message-wrapper {
     display: flex;
     align-items: center;
 }
@@ -170,6 +170,7 @@
 .sidebar-contact__name {
     color: #000000;
     font-size: 1rem;
+    font-weight: 500;
 }
 
 .sidebar-contact__time {
@@ -177,10 +178,25 @@
     color: rgba(0, 0, 0, 0.45);
 }
 
-.sidebar-contact__message {
+.sidebar-contact__message-wrapper {
     color: #00000099;
     font-size: 0.85rem;
     margin-right: 3px;
+    overflow: hidden;
+}
+
+.sidebar-contact__message-icon {
+    color: #B3B3B3;
+    margin-right: 3px;
+}
+
+.sidebar-contact__message-icon--blue {
+    color: #0DA9E5;
+}
+
+.sidebar-contact__message--unread {
+    color: #000000;
+    font-weight: 500;
 }
 
 .sidebar-contact__icons {
