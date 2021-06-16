@@ -11,12 +11,25 @@ import Profile from "./components/Profile";
 const Chat = () => {
 	const [showAttach, setShowAttach] = useState(false);
 	const [showEmojis, setShowEmojis] = useState(false);
-	const [showSidebar, setShowSidebar] = useState(false);
+	const [showProfileSidebar, setShowProfileSidebar] = useState(false);
+	const [showSearchSidebar, setShowSearchSidebar] = useState(false);
+
+	const openSidebar = (cb) => {
+		// close any open sidebar first
+		setShowProfileSidebar(false);
+		setShowSearchSidebar(false);
+
+		// call callback fn
+		cb(true);
+	};
 
 	return (
 		<div className="chat">
 			<div className="chat__body">
-				<Header openSidebar={() => setShowSidebar(true)} />
+				<Header
+					openProfileSidebar={() => openSidebar(setShowProfileSidebar)}
+					openSearchSidebar={() => openSidebar(setShowSearchSidebar)}
+				/>
 				<div className="chat__content">
 					<div className="chat__bg"></div>
 					<button className="chat__scroll-btn">
@@ -33,18 +46,18 @@ const Chat = () => {
 					/>
 				</footer>
 			</div>
-			{/* <ChatSidebar
+			<ChatSidebar
 				heading="Search Messages"
-				active={showSidebar}
-				closeSidebar={() => setShowSidebar(false)}
+				active={showSearchSidebar}
+				closeSidebar={() => setShowSearchSidebar(false)}
 			>
 				<Search />
-			</ChatSidebar> */}
+			</ChatSidebar>
 
 			<ChatSidebar
 				heading="Contact Info"
-				active={showSidebar}
-				closeSidebar={() => setShowSidebar(false)}
+				active={showProfileSidebar}
+				closeSidebar={() => setShowProfileSidebar(false)}
 			>
 				<Profile />
 			</ChatSidebar>
