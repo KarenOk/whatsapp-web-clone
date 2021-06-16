@@ -18,6 +18,7 @@ function App() {
 	const stopLoad = () => {
 		setStartLoadProgress(true);
 		setTimeout(() => setAppLoaded(true), 3000);
+		alert("loading stoped");
 	};
 
 	if (!appLoaded) return <Loader done={startLoadProgress} />;
