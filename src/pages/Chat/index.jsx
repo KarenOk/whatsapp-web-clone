@@ -4,6 +4,7 @@ import EmojiTray from "./EmojiTray";
 import ChatInput from "./ChatInput";
 import Header from "./Header";
 import ChatSidebar from "./ChatSidebar";
+import Icon from "components/Icon";
 
 const Chat = () => {
 	const [showAttach, setShowAttach] = useState(false);
@@ -16,6 +17,9 @@ const Chat = () => {
 				<Header openSidebar={() => setShowSidebar(true)} />
 				<div className="chat__content">
 					<div className="chat__bg"></div>
+					<button className="chat__scroll-btn">
+						<Icon id="downArrow" />
+					</button>
 				</div>
 				<footer className="chat__footer">
 					<EmojiTray showEmojis={showEmojis} />

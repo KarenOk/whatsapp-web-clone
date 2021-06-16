@@ -84,6 +84,21 @@
     background: url(../../assets/images/bg-chat-light.png) #E4DCD4;
 }
 
+.chat__scroll-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: rgb(145, 145, 145);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2)
+}
+
 .chat__footer {
     background: rgb(240, 240, 240);
 }
@@ -266,7 +281,6 @@
     flex-direction: column;
     transition: all 0.1s ease;
     overflow: hidden;
-    /* position: absolute; */
 }
 
 .chat-sidebar--active {
