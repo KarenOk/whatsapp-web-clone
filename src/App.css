@@ -29,6 +29,7 @@
     position: relative;
     z-index: 100;
     display: flex;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 500px) {
