@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Icon from "components/Icon";
+import { Link } from "react-router-dom";
+import formatTime from "utils/formatTime";
 
 const Contact = ({ contact }) => {
 	const getLastMessage = () => {
@@ -13,7 +15,7 @@ const Contact = ({ contact }) => {
 	const lastMessage = getLastMessage(contact);
 
 	return (
-		<div className="sidebar-contact">
+		<Link className="sidebar-contact" to={`/chat/${contact.id}`}>
 			<div className="sidebar-contact__avatar-wrapper">
 				<img
 					src={contact.profile_picture}
@@ -24,7 +26,9 @@ const Contact = ({ contact }) => {
 			<div className="sidebar-contact__content">
 				<div className="sidebar-contact__top-content">
 					<h2 className="sidebar-contact__name"> {contact.name} </h2>
-					<span className="sidebar-contact__time"> 02:45 </span>
+					<span className="sidebar-contact__time">
+						{formatTime(lastMessage.time)}
+					</span>
 				</div>
 				<div className="sidebar-contact__bottom-content">
 					<p className="sidebar-contact__message-wrapper">
@@ -65,7 +69,7 @@ const Contact = ({ contact }) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 
