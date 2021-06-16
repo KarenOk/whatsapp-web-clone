@@ -11,14 +11,14 @@ function App() {
 	const [startLoadProgress, setStartLoadProgress] = useState(false);
 
 	useEffect(() => {
-		window.addEventListener("load", stopLoad);
-		return () => window.removeEventListener("load", stopLoad);
+		stopLoad();
+		// window.addEventListener("load", stopLoad);
+		// return () => window.removeEventListener("load", stopLoad);
 	}, []);
 
 	const stopLoad = () => {
 		setStartLoadProgress(true);
 		setTimeout(() => setAppLoaded(true), 3000);
-		alert("loading stoped");
 	};
 
 	if (!appLoaded) return <Loader done={startLoadProgress} />;
