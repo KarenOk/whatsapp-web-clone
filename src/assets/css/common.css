@@ -2,6 +2,14 @@
     text-decoration: underline;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
+}
+
+.focus-visible {
+    outline-color: rgba(129, 202, 231, 0.3);
 }
