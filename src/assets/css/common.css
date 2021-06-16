@@ -6,6 +6,10 @@
     cursor: pointer;
 }
 
+.pos-rel {
+    position: relative;
+}
+
 .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
 }

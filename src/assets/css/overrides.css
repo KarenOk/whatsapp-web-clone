@@ -14,6 +14,10 @@ a, a:active, a:hover {
     color: inherit;
 }
 
+button {
+    cursor: pointer;
+}
+
 button, input {
     border: none;
     background-color: transparent;

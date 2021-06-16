@@ -154,6 +154,7 @@
 .sidebar-contact__top-content, .sidebar-contact__bottom-content, .sidebar-contact__message-wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .sidebar-contact__name, .sidebar-contact__message {
@@ -199,7 +200,7 @@
     font-weight: 500;
 }
 
-.sidebar-contact__icons {
+.sidebar-contact__icons, .sidebar-contact:not(:focus) .sidebar-contact__icons {
     display: flex;
     justify-content: center;
     align-items: center;
