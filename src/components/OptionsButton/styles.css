@@ -11,7 +11,7 @@
 }
 
 .options-btn__options {
-    z-index: 100;
+    z-index: 1000;
     top: 40px;
     right: 0;
     position: absolute;

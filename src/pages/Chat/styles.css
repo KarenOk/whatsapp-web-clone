@@ -154,6 +154,12 @@
     white-space: pre-line;
 }
 
+.chat__msg.chat__img-wrapper {
+    padding: 4px;
+    padding-bottom: 0;
+    width: 95%;
+}
+
 .chat__msg--sent {
     background: #DBF8C6;
     float: right;
@@ -188,12 +194,23 @@
     border-left: 6px solid #DBF8C6;
 }
 
+.chat__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .chat__time {
     position: absolute;
-    right: 5px;
+    right: 7px;
     bottom: 3px;
     color: rgba(0, 0, 0, 0.45);
     font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.chat__img-wrapper .chat__time, .chat__img-wrapper .chat__msg-options-icon {
+    color: white;
 }
 
 .chat__msg-options {
@@ -204,6 +221,18 @@
     top: 3px;
     pointer-events: none;
     transition: all 0.2s;
+}
+
+.chat__msg--rxd .chat__msg-options {
+    background: white;
+}
+
+.chat__msg--sent .chat__msg-options {
+    background: #DBF8C6;
+}
+
+.chat__img-wrapper .chat__msg-options {
+    background: transparent;
 }
 
 .chat__msg:hover .chat__msg-options {
@@ -652,5 +681,13 @@
     .chat-sidebar--active {
         transform: translateX(0);
         transition: transform 0.1s ease;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .chat__msg.chat__img-wrapper {
+        width: 40%;
+        min-width: 300px;
+        max-width: 400px;
     }
 }

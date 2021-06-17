@@ -1,6 +1,6 @@
 import Icon from "components/Icon";
-import OptionsBtn from "components/OptionsButton";
 import React from "react";
+import media from "assets/images/women.jpeg";
 
 const Convo = ({ lastMsgRef }) => {
 	return new Array(10).fill(null).map((_, index) => (
@@ -16,6 +16,13 @@ const Convo = ({ lastMsgRef }) => {
 				</p>
 			)}
 			<div className="chat__msg-group chat__msg-group--sent">
+				<div className="chat__msg chat__msg--sent chat__img-wrapper">
+					<img src={media} alt="" className="chat__img" />
+					<span className="chat__time"> 02:55</span>
+					<button aria-label="Message options" className="chat__msg-options">
+						<Icon id="downArrow" className="chat__msg-options-icon" />
+					</button>
+				</div>
 				<p className="chat__msg chat__msg--sent">
 					<span>
 						You've never had this much money to even owe in the first placee
@@ -62,6 +69,13 @@ const Convo = ({ lastMsgRef }) => {
 						<Icon id="downArrow" className="chat__msg-options-icon" />
 					</button>
 				</p>
+				<div className="chat__msg chat__msg--rxd chat__img-wrapper">
+					<img src={media} alt="" className="chat__img" />
+					<span className="chat__time"> 02:55</span>
+					<button aria-label="Message options" className="chat__msg-options">
+						<Icon id="downArrow" className="chat__msg-options-icon" />
+					</button>
+				</div>
 			</div>
 		</>
 	));
