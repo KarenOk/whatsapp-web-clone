@@ -27,6 +27,11 @@
     z-index: 10;
 }
 
+.chat__header {
+    /* Needed for the options btn to stay on top */
+    z-index: 100;
+}
+
 /* Chat Header Component  */
 
 .chat__avatar-wrapper {
