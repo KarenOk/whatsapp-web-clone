@@ -3,6 +3,9 @@ import React from "react";
 const Convo = () => {
 	return new Array(10).fill(null).map((_) => (
 		<>
+			<div className="chat__date-wrapper">
+				<span className="chat__date"> 6/10/2021</span>
+			</div>
 			<div className="chat__msg-group chat__msg-group--sent">
 				<p className="chat__msg chat__msg--sent">
 					<span>

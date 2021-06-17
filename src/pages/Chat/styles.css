@@ -93,6 +93,22 @@
     padding-bottom: 2pc;
 }
 
+.chat__date-wrapper {
+    text-align: center;
+    margin: 10px 0 14px;
+    position: relative;
+    z-index: 100;
+}
+
+.chat__date {
+    background: #E1F2FA;
+    display: inline-block;
+    color: #000000;
+    font-size: 0.85rem;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+
 .chat__msg-group {
     padding: 0 5%;
     display: flex;
