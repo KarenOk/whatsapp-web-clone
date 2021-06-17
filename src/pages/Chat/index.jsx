@@ -11,7 +11,8 @@ import Convo from "./components/Convo";
 import { useUsersContext } from "context/usersContext";
 
 const Chat = ({ match, history }) => {
-	const { users, setUserAsUnread } = useUsersContext();
+	const { users, setUserAsUnread, addNewMessage } = useUsersContext();
+
 	const userId = match.params.id;
 	let user = users.filter((user) => user.id === Number(userId))[0];
 
@@ -20,6 +21,7 @@ const Chat = ({ match, history }) => {
 	const [showEmojis, setShowEmojis] = useState(false);
 	const [showProfileSidebar, setShowProfileSidebar] = useState(false);
 	const [showSearchSidebar, setShowSearchSidebar] = useState(false);
+	const [newMessage, setNewMessage] = useState("");
 
 	useEffect(() => {
 		if (!user) history.push("/");
@@ -40,6 +42,12 @@ const Chat = ({ match, history }) => {
 
 	const scrollToLastMsg = () => {
 		lastMsgRef.current.scrollIntoView();
+	};
+
+	const submitNewMessage = () => {
+		addNewMessage(user.id, newMessage);
+		setNewMessage("");
+		scrollToLastMsg();
 	};
 
 	return (
@@ -63,12 +71,19 @@ const Chat = ({ match, history }) => {
 					>
 						<Icon id="downArrow" />
 					</button>
-					<EmojiTray showEmojis={showEmojis} />
+					<EmojiTray
+						showEmojis={showEmojis}
+						newMessage={newMessage}
+						setNewMessage={setNewMessage}
+					/>
 					<ChatInput
 						showEmojis={showEmojis}
 						setShowEmojis={setShowEmojis}
 						showAttach={showAttach}
 						setShowAttach={setShowAttach}
+						newMessage={newMessage}
+						setNewMessage={setNewMessage}
+						submitNewMessage={submitNewMessage}
 					/>
 				</footer>
 			</div>

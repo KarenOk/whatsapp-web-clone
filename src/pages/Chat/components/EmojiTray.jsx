@@ -16,7 +16,11 @@ const emojiTabs = [
 	{ icon: "emojiFlags", label: "Flag emojis", active: false },
 ];
 
-const EmojiTray = ({ showEmojis }) => {
+const EmojiTray = ({ showEmojis, newMessage, setNewMessage }) => {
+	const addEmoji = (emoji) => {
+		setNewMessage(newMessage + emoji);
+	};
+
 	return (
 		<div
 			className={`emojis__wrapper ${
@@ -45,6 +49,7 @@ const EmojiTray = ({ showEmojis }) => {
 							aria-label="emoji"
 							className="emojis__emoji"
 							key={index}
+							onClick={() => addEmoji(emoji)}
 						>
 							{emoji}
 						</p>
@@ -58,6 +63,7 @@ const EmojiTray = ({ showEmojis }) => {
 							aria-label="emoji"
 							className="emojis__emoji"
 							key={index}
+							onClick={() => addEmoji(emoji)}
 						>
 							{emoji}
 						</p>

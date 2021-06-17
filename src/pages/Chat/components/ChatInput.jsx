@@ -14,6 +14,9 @@ const ChatInput = ({
 	setShowAttach,
 	showEmojis,
 	setShowEmojis,
+	newMessage,
+	setNewMessage,
+	submitNewMessage,
 }) => {
 	return (
 		<div className="chat__input-wrapper">
@@ -64,10 +67,21 @@ const ChatInput = ({
 					))}
 				</div>
 			</div>
-			<input className="chat__input" placeholder="Type a message" />
-			<button aria-label="Record voice note">
-				<Icon id="microphone" className="chat__input-icon" />
-			</button>
+			<input
+				className="chat__input"
+				placeholder="Type a message"
+				value={newMessage}
+				onChange={(e) => setNewMessage(e.target.value)}
+			/>
+			{newMessage ? (
+				<button aria-label="Send message" onClick={submitNewMessage}>
+					<Icon id="send" className="chat__input-icon" />
+				</button>
+			) : (
+				<button aria-label="Record voice note">
+					<Icon id="microphone" className="chat__input-icon" />
+				</button>
+			)}
 		</div>
 	);
 };
