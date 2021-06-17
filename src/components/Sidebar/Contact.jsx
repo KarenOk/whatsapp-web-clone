@@ -2,8 +2,10 @@ import React from "react";
 import Icon from "components/Icon";
 import { Link } from "react-router-dom";
 import formatTime from "utils/formatTime";
+import { useUsersContext } from "context/usersContext";
 
 const Contact = ({ contact }) => {
+	const { setUserAsUnread } = useUsersContext();
 	const getLastMessage = () => {
 		const messageDates = Object.keys(contact.messages);
 		const recentMessageDate = messageDates[messageDates.length - 1];
@@ -15,7 +17,11 @@ const Contact = ({ contact }) => {
 	const lastMessage = getLastMessage(contact);
 
 	return (
-		<Link className="sidebar-contact" to={`/chat/${contact.id}`}>
+		<Link
+			className="sidebar-contact"
+			to={`/chat/${contact.id}`}
+			onClick={() => setUserAsUnread(contact.id)}
+		>
 			<div className="sidebar-contact__avatar-wrapper">
 				<img
 					src={contact.profile_picture}

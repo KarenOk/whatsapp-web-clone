@@ -8,9 +8,10 @@ import Icon from "components/Icon";
 import Search from "./components/Search";
 import Profile from "./components/Profile";
 import Convo from "./components/Convo";
-import users from "data/contacts";
+import { useUsersContext } from "context/usersContext";
 
 const Chat = ({ match, history }) => {
+	const { users, setUserAsUnread } = useUsersContext();
 	const userId = match.params.id;
 	let user = users.filter((user) => user.id === Number(userId))[0];
 
@@ -22,7 +23,10 @@ const Chat = ({ match, history }) => {
 
 	useEffect(() => {
 		if (!user) history.push("/");
-		else scrollToLastMsg();
+		else {
+			scrollToLastMsg();
+			setUserAsUnread(user.id);
+		}
 	}, []);
 
 	const openSidebar = (cb) => {
