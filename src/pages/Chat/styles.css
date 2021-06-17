@@ -12,6 +12,21 @@
     position: relative;
 }
 
+.chat__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.05;
+    z-index: 1;
+    background: url(../../assets/images/bg-chat-light.png) #E4DCD4;
+}
+
+.chat__header, .chat__footer {
+    z-index: 100;
+}
+
 /* Chat Header Component  */
 
 .chat__avatar-wrapper {
@@ -68,11 +83,6 @@
 
 /* Chat Content */
 
-.chat__msg-group {
-    position: relative;
-    z-index: 10;
-}
-
 .chat__content {
     flex: 1;
     position: relative;
@@ -83,37 +93,13 @@
     padding-bottom: 2pc;
 }
 
-.chat__bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    opacity: 0.05;
-    z-index: 1;
-    background: url(../../assets/images/bg-chat-light.png) #E4DCD4;
-}
-
-.chat__scroll-btn {
-    position: absolute;
-    right: 10px;
-    bottom: 15px;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    color: rgb(145, 145, 145);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #FFFFFF;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2)
-}
-
 .chat__msg-group {
     padding: 0 5%;
     display: flex;
     flex-direction: column;
     margin-bottom: 12px;
+    position: relative;
+    z-index: 10;
 }
 
 .chat__msg-group--sent {
@@ -184,6 +170,22 @@
 
 .chat__footer {
     background: rgb(240, 240, 240);
+    position: relative;
+}
+
+.chat__scroll-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 80px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: rgb(145, 145, 145);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .06), 0 2px 5px 0 rgba(0, 0, 0, .2)
 }
 
 /* Emoji Tray */

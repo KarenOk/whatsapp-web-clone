@@ -27,18 +27,19 @@ const Chat = () => {
 	return (
 		<div className="chat">
 			<div className="chat__body">
+				<div className="chat__bg"></div>
+
 				<Header
 					openProfileSidebar={() => openSidebar(setShowProfileSidebar)}
 					openSearchSidebar={() => openSidebar(setShowSearchSidebar)}
 				/>
 				<div className="chat__content">
-					<div className="chat__bg"></div>
-					<button className="chat__scroll-btn">
-						<Icon id="downArrow" />
-					</button>
 					<Convo />
 				</div>
 				<footer className="chat__footer">
+					<button className="chat__scroll-btn" aria-label="scroll down">
+						<Icon id="downArrow" />
+					</button>
 					<EmojiTray showEmojis={showEmojis} />
 					<ChatInput
 						showEmojis={showEmojis}

@@ -5,7 +5,7 @@ import OptionsBtn from "components/OptionsButton";
 
 const Header = ({ openProfileSidebar, openSearchSidebar }) => {
 	return (
-		<header className="header">
+		<header className="header chat__header">
 			<div className="chat__avatar-wrapper" onClick={openProfileSidebar}>
 				<img src={avatar} alt="Karen Okonkwo" className="avatar" />
 			</div>
