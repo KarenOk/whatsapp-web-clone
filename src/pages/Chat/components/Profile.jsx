@@ -1,5 +1,6 @@
 import React from "react";
 import avatar from "assets/images/profile-picture-girl-4.jpeg";
+import groupAvatar from "assets/images/women.png";
 import media from "assets/images/placeholder.jpeg";
 import Checkbox from "components/Checkbox";
 import Icon from "components/Icon";
@@ -7,19 +8,19 @@ import Icon from "components/Icon";
 const groups = [
 	{
 		name: "Group 1",
-		avatar: avatar,
+		avatar: groupAvatar,
 		members:
 			"Michelle Obama, Sandra Bullock, Kerry Washington, Beyonce Knowles, Kamala Harris, You",
 	},
 	{
 		name: "Group 2",
-		avatar: avatar,
+		avatar: groupAvatar,
 		members:
 			"Michelle Obama, Sandra Bullock, Kerry Washington, Beyonce Knowles, Kamala Harris, You",
 	},
 	{
 		name: "Group 3",
-		avatar: avatar,
+		avatar: groupAvatar,
 		members:
 			"Michelle Obama, Sandra Bullock, Kerry Washington, Beyonce Knowles, Kamala Harris, You",
 	},
