@@ -4,7 +4,7 @@ import media from "assets/images/women.jpeg";
 
 const Convo = ({ lastMsgRef }) => {
 	return new Array(10).fill(null).map((_, index) => (
-		<>
+		<div key={index}>
 			<div className="chat__date-wrapper">
 				<span className="chat__date"> 6/10/2021</span>
 			</div>
@@ -77,7 +77,7 @@ const Convo = ({ lastMsgRef }) => {
 					</button>
 				</div>
 			</div>
-		</>
+		</div>
 	));
 };
 

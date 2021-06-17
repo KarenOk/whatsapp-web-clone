@@ -105,7 +105,7 @@ const Profile = () => {
 					</h2>
 				</div>
 				{groups.map((group) => (
-					<div className="profile__group">
+					<div className="profile__group" key={group.name}>
 						<div className="profile__group-avatar-wrapper">
 							<img src={group.avatar} alt="Group 3" className="avatar" />
 						</div>

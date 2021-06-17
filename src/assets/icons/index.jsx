@@ -14,7 +14,11 @@ const icons = {
 		</svg>
 	),
 	attachCamera: (props) => (
-		<span data-testid="attach-camera" data-icon="attach-camera" class="_1SWzr">
+		<span
+			data-testid="attach-camera"
+			data-icon="attach-camera"
+			className="_1SWzr"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -29,7 +33,7 @@ const icons = {
 				<clipPath id="camera-SVGID_2_">
 					<use xlinkHref="#camera-SVGID_1_" overflow="visible"></use>
 				</clipPath>
-				<g clip-path="url(#camera-SVGID_2_)">
+				<g clipPath="url(#camera-SVGID_2_)">
 					<path
 						fill="#D3396D"
 						d="M26.5-1.1C11.9-1.1-1.1 5.6-1.1 27.6h55.2c-.1-19-13-28.7-27.6-28.7z"
@@ -64,7 +68,7 @@ const icons = {
 			<clipPath id="contact-SVGID_2_">
 				<use xlinkHref="#contact-SVGID_1_" overflow="visible"></use>
 			</clipPath>
-			<g clip-path="url(#contact-SVGID_2_)">
+			<g clipPath="url(#contact-SVGID_2_)">
 				<path
 					fill="#0795DC"
 					d="M26.5-1.1C11.9-1.1-1.1 5.6-1.1 27.6h55.2c-.1-19-13-28.7-27.6-28.7z"
@@ -97,7 +101,7 @@ const icons = {
 			<clipPath id="document-SVGID_2_">
 				<use xlinkHref="#document-SVGID_1_" overflow="visible"></use>
 			</clipPath>
-			<g clip-path="url(#document-SVGID_2_)">
+			<g clipPath="url(#document-SVGID_2_)">
 				<path
 					fill="#5157AE"
 					d="M26.5-1.1C11.9-1.1-1.1 5.6-1.1 27.6h55.2c-.1-19-13-28.7-27.6-28.7z"
@@ -130,7 +134,7 @@ const icons = {
 			<clipPath id="image-SVGID_2_">
 				<use xlinkHref="#image-SVGID_1_" overflow="visible"></use>
 			</clipPath>
-			<g clip-path="url(#image-SVGID_2_)">
+			<g clipPath="url(#image-SVGID_2_)">
 				<path
 					fill="#AC44CF"
 					d="M26.5-1.1C11.9-1.1-1.1 5.6-1.1 27.6h55.2c-.1-19-13-28.7-27.6-28.7z"
@@ -165,7 +169,7 @@ const icons = {
 			<clipPath id="rooms-SVGID_2_">
 				<use xlinkHref="#rooms-SVGID_1_" overflow="visible"></use>
 			</clipPath>
-			<g clip-path="url(#rooms-SVGID_2_)">
+			<g clipPath="url(#rooms-SVGID_2_)">
 				<path
 					fill="#396CD3"
 					d="M26.5-1.1C11.9-1.1-1.1 5.6-1.1 27.6h55.2c-.1-19-13-28.7-27.6-28.7z"
@@ -179,8 +183,8 @@ const icons = {
 			<g fill="#F5F5F5">
 				<path
 					id="svg-rooms"
-					fill-rule="evenodd"
-					clip-rule="evenodd"
+					fillRule="evenodd"
+					clipRule="evenodd"
 					d="M28.5 18a3.5 3.5 0 0 1 3.5 3.5v10a3.5 3.5 0 0 1-3.5 3.5h-10a3.5 3.5 0 0 1-3.5-3.5v-10a3.5 3.5 0 0 1 3.5-3.5h10zm-7.925 6.782a.804.804 0 0 0-1.045-.073l-.708.698-.297.33-.134.177a4.075 4.075 0 0 0 .433 5.265 4.07 4.07 0 0 0 2.886 1.198c.976 0 1.952-.349 2.73-1.05l.784-.777.077-.091.063-.102.045-.105a.797.797 0 0 0-.189-.824.806.806 0 0 0-1.045-.073l-.704.694-.123.116-.147.119-.15.105a2.5 2.5 0 0 1-3.099-.337 2.492 2.492 0 0 1-.12-3.392l.748-.756.076-.091.063-.102.046-.105a.794.794 0 0 0-.19-.824zm5.281-.637a.803.803 0 0 0-1.044-.073l-3.67 3.662-.078.091-.063.102-.045.105a.793.793 0 0 0 .754 1.056.805.805 0 0 0 .481-.16l3.671-3.662.076-.09.064-.102.045-.105a.795.795 0 0 0-.191-.824zm2.323-2.323a4.078 4.078 0 0 0-5.615-.149l-.785.777-.073.084-.062.098a.806.806 0 0 0 .14.941.803.803 0 0 0 1.043.072l.705-.693.127-.119.137-.111a2.494 2.494 0 0 1 3.257.227c.921.923.972 2.413.117 3.392l-.746.755-.072.084-.062.098a.8.8 0 0 0 .139.941.8.8 0 0 0 1.043.072l.709-.697.148-.156.145-.17a4.084 4.084 0 0 0-.295-5.446zm9.815-.188l.006.129v9.474c0 1.31-1.714 1.998-2.744 1.12l-.878-.847a2.828 2.828 0 0 1-.871-1.849l-.007-.19v-5.943c0-.765.316-1.498.879-2.039l.877-.846c.996-.848 2.631-.234 2.738.991z"
 				></path>
 			</g>
@@ -561,7 +565,7 @@ const icons = {
 		<span
 			data-testid="chevron-right-alt"
 			data-icon="chevron-right-alt"
-			class="pQbiR"
+			className="pQbiR"
 			{...props}
 		>
 			<svg

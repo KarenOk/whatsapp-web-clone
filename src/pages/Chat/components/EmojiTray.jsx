@@ -27,6 +27,7 @@ const EmojiTray = ({ showEmojis }) => {
 				{emojiTabs.map((tab) => (
 					<div
 						className={`emojis__tab ${tab.active ? "emojis__tab--active" : ""}`}
+						key={tab.label}
 					>
 						<button aria-label={tab.label} key={tab.icon}>
 							<Icon id={tab.icon} className="emojis__tab-icon" />
@@ -38,16 +39,26 @@ const EmojiTray = ({ showEmojis }) => {
 				<input className="emojis__search" placeholder="Search Emoji" />
 				<h4 className="emojis__label"> Smileys {"&"} People </h4>
 				<div className="emojis__grid">
-					{emojis.map((emoji) => (
-						<p role="img" aria-label="emoji" className="emojis__emoji">
+					{emojis.map((emoji, index) => (
+						<p
+							role="img"
+							aria-label="emoji"
+							className="emojis__emoji"
+							key={index}
+						>
 							{emoji}
 						</p>
 					))}
 				</div>
 				<h4 className="emojis__label"> Animals {"&"} Nature </h4>
 				<div className="emojis__grid">
-					{emojis.map((emoji) => (
-						<p role="img" aria-label="emoji" className="emojis__emoji">
+					{emojis.map((emoji, index) => (
+						<p
+							role="img"
+							aria-label="emoji"
+							className="emojis__emoji"
+							key={index}
+						>
 							{emoji}
 						</p>
 					))}
