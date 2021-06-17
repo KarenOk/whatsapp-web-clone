@@ -23,8 +23,8 @@
     background: url(../../assets/images/bg-chat-light.png) #E4DCD4;
 }
 
-.chat__header, .chat__footer {
-    z-index: 100;
+.chat__header, .chat__footer, .chat__date-wrapper, .chat__msg-group, .chat__encryption-msg {
+    z-index: 10;
 }
 
 /* Chat Header Component  */
@@ -89,15 +89,13 @@
     background: #E4DCD4;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding: 20px;
-    padding-bottom: 2pc;
+    padding: 20px 5% 2pc;
 }
 
 .chat__date-wrapper {
     text-align: center;
     margin: 10px 0 14px;
     position: relative;
-    z-index: 100;
 }
 
 .chat__date {
@@ -109,13 +107,29 @@
     border-radius: 5px;
 }
 
+.chat__encryption-msg {
+    background: #FDF4C5;
+    color: #000000;
+    font-size: 0.77rem;
+    text-align: center;
+    padding: 5px 10px;
+    position: relative;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    line-height: 20px;
+}
+
+.chat__encryption-icon {
+    color: #8C866C;
+    margin-right: 5px;
+    margin-bottom: -1px;
+}
+
 .chat__msg-group {
-    padding: 0 5%;
     display: flex;
     flex-direction: column;
     margin-bottom: 12px;
     position: relative;
-    z-index: 10;
 }
 
 .chat__msg-group--sent {

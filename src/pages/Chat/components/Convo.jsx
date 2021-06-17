@@ -1,11 +1,19 @@
+import Icon from "components/Icon";
 import React from "react";
 
 const Convo = () => {
-	return new Array(10).fill(null).map((_) => (
+	return new Array(10).fill(null).map((_, index) => (
 		<>
 			<div className="chat__date-wrapper">
 				<span className="chat__date"> 6/10/2021</span>
 			</div>
+			{index === 0 && (
+				<p className="chat__encryption-msg">
+					<Icon id="lock" className="chat__encryption-icon" />
+					Messages are end-to-end encrypted. No one outside of this chat, not
+					even WhatsApp, can read or listen to them. Click to learn more.
+				</p>
+			)}
 			<div className="chat__msg-group chat__msg-group--sent">
 				<p className="chat__msg chat__msg--sent">
 					<span>
