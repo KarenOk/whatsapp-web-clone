@@ -3,15 +3,15 @@ import Icon from "components/Icon";
 import avatar from "assets/images/profile-picture-girl-4.jpeg";
 import OptionsBtn from "components/OptionsButton";
 
-const Header = ({ openProfileSidebar, openSearchSidebar }) => {
+const Header = ({ user, openProfileSidebar, openSearchSidebar }) => {
 	return (
 		<header className="header chat__header">
 			<div className="chat__avatar-wrapper" onClick={openProfileSidebar}>
-				<img src={avatar} alt="Karen Okonkwo" className="avatar" />
+				<img src={user.profile_picture} alt={user?.name} className="avatar" />
 			</div>
 
 			<div className="chat__contact-wrapper" onClick={openProfileSidebar}>
-				<h2 className="chat__contact-name"> Karen Okonkwo</h2>
+				<h2 className="chat__contact-name"> {user?.name}</h2>
 				<p className="chat__contact-desc"> online </p>
 			</div>
 			<div className="chat__actions">

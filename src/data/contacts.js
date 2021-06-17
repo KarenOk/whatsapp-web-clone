@@ -6,6 +6,7 @@ import ppBoy1 from "assets/images/profile-picture-boy-1.jpeg";
 import ppBoy2 from "assets/images/profile-picture-boy-2.jpeg";
 import ppBoy3 from "assets/images/profile-picture-boy-3.jpeg";
 import getRandomSentence from "utils/getRandomSentence";
+
 const users = [
 	{
 		id: 1,
@@ -15,7 +16,7 @@ const users = [
 		whatsapp_name: "Beyonce",
 		unread: 3,
 		messages: {
-			"2021-06-04": [
+			"04/06/2021": [
 				{
 					content: getRandomSentence(),
 					sender: 1,
@@ -23,7 +24,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -35,14 +36,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-10": [
+			YESTERDAY: [
 				{
 					content: getRandomSentence(),
 					sender: 1,
@@ -50,7 +51,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -62,14 +63,20 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-13": [
+			TODAY: [
+				{
+					content: getRandomSentence(),
+					sender: null,
+					time: "08:10:26",
+					status: null,
+				},
 				{
 					content: getRandomSentence(),
 					sender: 1,
@@ -77,15 +84,33 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					image: true,
+					sender: 1,
+					time: "09:12:26",
+					status: null,
+				},
+				{
+					content: getRandomSentence(),
 					sender: null,
-					time: "08:15:45",
+					time: "08:12:45",
 					status: "read",
+				},
+				{
+					image: true,
+					sender: null,
+					time: "09:13:26",
+					status: null,
 				},
 				{
 					content: getRandomSentence(),
 					sender: 1,
-					time: "09:11:26",
+					time: "09:20:26",
+					status: null,
+				},
+				{
+					content: getRandomSentence(),
+					sender: 1,
+					time: "09:21:26",
 					status: null,
 				},
 			],
@@ -101,7 +126,7 @@ const users = [
 		whatsapp_name: "Karen O.",
 		unread: 0,
 		messages: {
-			"2021-06-04": [
+			"04/06/2021": [
 				{
 					content: getRandomSentence(),
 					sender: 2,
@@ -109,7 +134,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -121,14 +146,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-10": [
+			YESTERDAY: [
 				{
 					content: getRandomSentence(),
 					sender: 2,
@@ -136,7 +161,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -148,14 +173,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-13": [
+			TODAY: [
 				{
 					content: getRandomSentence(),
 					sender: 2,
@@ -163,7 +188,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -187,7 +212,7 @@ const users = [
 		whatsapp_name: "titi123",
 		unread: 0,
 		messages: {
-			"2021-06-04": [
+			"04/06/2021": [
 				{
 					content: getRandomSentence(),
 					sender: 3,
@@ -195,7 +220,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -207,14 +232,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "sent",
 				},
 			],
 
-			"2021-06-10": [
+			YESTERDAY: [
 				{
 					content: getRandomSentence(),
 					sender: 3,
@@ -222,7 +247,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -234,14 +259,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-13": [
+			TODAY: [
 				{
 					content: getRandomSentence(),
 					sender: 3,
@@ -249,7 +274,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -261,7 +286,19 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					image: true,
+					sender: 3,
+					time: "09:12:26",
+					status: null,
+				},
+				{
+					image: true,
+					sender: null,
+					time: "09:13:26",
+					status: null,
+				},
+				{
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "sent",
@@ -279,7 +316,7 @@ const users = [
 		whatsapp_name: "David",
 		unread: 1,
 		messages: {
-			"2021-06-04": [
+			"04/06/2021": [
 				{
 					content: getRandomSentence(),
 					sender: 4,
@@ -287,7 +324,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -299,14 +336,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-10": [
+			YESTERDAY: [
 				{
 					content: getRandomSentence(),
 					sender: 4,
@@ -314,7 +351,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -326,14 +363,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-13": [
+			TODAY: [
 				{
 					content: getRandomSentence(),
 					sender: 4,
@@ -341,7 +378,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -353,7 +390,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
@@ -384,7 +421,7 @@ const users = [
 		whatsapp_name: "Beyonce",
 		unread: 0,
 		messages: {
-			"2021-06-04": [
+			"04/06/2021": [
 				{
 					content: getRandomSentence(),
 					sender: 5,
@@ -392,7 +429,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -404,14 +441,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-10": [
+			YESTERDAY: [
 				{
 					content: getRandomSentence(),
 					sender: 5,
@@ -419,7 +456,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -431,14 +468,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-13": [
+			TODAY: [
 				{
 					content: getRandomSentence(),
 					sender: 5,
@@ -446,7 +483,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -458,7 +495,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
@@ -476,7 +513,7 @@ const users = [
 		whatsapp_name: "Chris",
 		unread: 3,
 		messages: {
-			"2021-06-04": [
+			"04/06/2021": [
 				{
 					content: getRandomSentence(),
 					sender: 6,
@@ -484,7 +521,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -496,14 +533,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-10": [
+			YESTERDAY: [
 				{
 					content: getRandomSentence(),
 					sender: 6,
@@ -511,7 +548,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -523,14 +560,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-13": [
+			TODAY: [
 				{
 					content: getRandomSentence(),
 					sender: 6,
@@ -538,7 +575,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -550,7 +587,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
@@ -581,7 +618,7 @@ const users = [
 		whatsapp_name: "Karen",
 		unread: 0,
 		messages: {
-			"2021-06-04": [
+			"04/06/2021": [
 				{
 					content: getRandomSentence(),
 					sender: 8,
@@ -589,7 +626,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -601,14 +638,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-10": [
+			YESTERDAY: [
 				{
 					content: getRandomSentence(),
 					sender: 7,
@@ -616,7 +653,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -628,14 +665,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-13": [
+			TODAY: [
 				{
 					content: getRandomSentence(),
 					sender: 7,
@@ -643,7 +680,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -655,7 +692,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
@@ -674,7 +711,7 @@ const users = [
 		whatsapp_name: "Beyonce",
 		unread: 0,
 		messages: {
-			"2021-06-04": [
+			"04/06/2021": [
 				{
 					content: getRandomSentence(),
 					sender: 8,
@@ -682,7 +719,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -694,14 +731,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-10": [
+			YESTERDAY: [
 				{
 					content: getRandomSentence(),
 					sender: 8,
@@ -709,7 +746,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -721,14 +758,14 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
 				},
 			],
 
-			"2021-06-13": [
+			TODAY: [
 				{
 					content: getRandomSentence(),
 					sender: 8,
@@ -736,7 +773,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "08:15:45",
 					status: "read",
@@ -748,7 +785,7 @@ const users = [
 					status: null,
 				},
 				{
-					content: "Ooooh. That seems Interesting. Tell me more!",
+					content: getRandomSentence(),
 					sender: null,
 					time: "09:15:45",
 					status: "read",
