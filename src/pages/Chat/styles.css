@@ -133,7 +133,7 @@
 }
 
 .chat__msg {
-    padding: 6px 56px 8px 9px;
+    padding: 6px 7px 8px 9px;
     margin-bottom: 12px;
     font-size: 0.85rem;
     color: #000000;
@@ -144,6 +144,7 @@
     border-radius: 5px;
     position: relative;
     white-space: pre-line;
+    display: flex
 }
 
 .chat__msg.chat__img-wrapper {
@@ -194,8 +195,17 @@
     object-fit: cover;
 }
 
-.chat__time {
+.chat__msg-filler {
+    width: 65px;
+    display: inline-block;
+    height: 3px;
+    background: transparent;
+}
+
+.chat__msg-footer {
     position: absolute;
+    display: flex;
+    align-items: center;
     right: 7px;
     bottom: 3px;
     color: rgba(0, 0, 0, 0.45);
@@ -203,7 +213,16 @@
     font-weight: 500;
 }
 
-.chat__img-wrapper .chat__time, .chat__img-wrapper .chat__msg-options-icon {
+.chat__msg-status-icon {
+    color: #B3B3B3;
+    margin-left: 3px;
+}
+
+.chat__msg-status-icon--blue {
+    color: #0DA9E5;
+}
+
+.chat__img-wrapper .chat__msg-footer, .chat__img-wrapper .chat__msg-options-icon {
     color: white;
 }
 

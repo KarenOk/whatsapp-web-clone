@@ -1,6 +1,7 @@
 import Icon from "components/Icon";
 import React from "react";
 import media from "assets/images/women.jpeg";
+import formatTime from "utils/formatTime";
 
 const Convo = ({ lastMsgRef, messages: allMessages }) => {
 	const dates = Object.keys(allMessages);
@@ -35,7 +36,9 @@ const Convo = ({ lastMsgRef, messages: allMessages }) => {
 										ref={assignRef()}
 									>
 										<img src={media} alt="" className="chat__img" />
-										<span className="chat__time"> 02:55</span>
+										<span className="chat__msg-footer">
+											{formatTime(message.time)}
+										</span>
 
 										<button
 											aria-label="Message options"
@@ -47,8 +50,10 @@ const Convo = ({ lastMsgRef, messages: allMessages }) => {
 								) : message.sender ? (
 									<p className="chat__msg chat__msg--rxd" ref={assignRef()}>
 										<span>{message.content}</span>
-										<span className="chat__time"> 02:55</span>
-
+										<span className="chat__msg-filler"> </span>
+										<span className="chat__msg-footer">
+											{formatTime(message.time)}
+										</span>
 										<button
 											aria-label="Message options"
 											className="chat__msg-options"
@@ -59,7 +64,23 @@ const Convo = ({ lastMsgRef, messages: allMessages }) => {
 								) : (
 									<p className="chat__msg chat__msg--sent" ref={assignRef()}>
 										<span>{message.content}</span>
-										<span className="chat__time"> 02:55</span>
+										<span className="chat__msg-filler"> </span>
+										<span className="chat__msg-footer">
+											<span> {formatTime(message.time)} </span>
+											<Icon
+												id={
+													message?.status === "sent"
+														? "singleTick"
+														: "doubleTick"
+												}
+												aria-label={message?.status}
+												className={`chat__msg-status-icon ${
+													message?.status === "read"
+														? "chat__msg-status-icon--blue"
+														: ""
+												}`}
+											/>
+										</span>
 										<button
 											aria-label="Message options"
 											className="chat__msg-options"
