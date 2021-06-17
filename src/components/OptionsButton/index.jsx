@@ -9,6 +9,7 @@ const OptionsBtn = ({
 	ariaLabel,
 	options = [],
 	position = "left",
+	showPressed,
 	...props
 }) => {
 	const [showOptions, setShowOptions] = useState(false);
@@ -17,9 +18,9 @@ const OptionsBtn = ({
 		<div className="pos-rel">
 			<button
 				aria-label={ariaLabel}
-				className={`options-btn ${showOptions ? "options-btn--pressed" : ""} ${
-					className || ""
-				}`}
+				className={`options-btn ${
+					showOptions && showPressed ? "options-btn--pressed" : ""
+				} ${className || ""}`}
 				onClick={() => setShowOptions(!showOptions)}
 				{...props}
 			>

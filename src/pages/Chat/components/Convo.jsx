@@ -1,4 +1,5 @@
 import Icon from "components/Icon";
+import OptionsBtn from "components/OptionsButton";
 import React from "react";
 
 const Convo = ({ lastMsgRef }) => {
@@ -20,6 +21,10 @@ const Convo = ({ lastMsgRef }) => {
 						You've never had this much money to even owe in the first placee
 					</span>
 					<span className="chat__time"> 02:55</span>
+
+					<button aria-label="Message options" className="chat__msg-options">
+						<Icon id="downArrow" className="chat__msg-options-icon" />
+					</button>
 				</p>
 				<p className="chat__msg chat__msg--sent">
 					<span>
@@ -34,6 +39,9 @@ const Convo = ({ lastMsgRef }) => {
                             FOR`}
 					</span>
 					<span className="chat__time"> 02:55</span>
+					<button aria-label="Message options" className="chat__msg-options">
+						<Icon id="downArrow" className="chat__msg-options-icon" />
+					</button>
 				</p>
 			</div>
 			<div
@@ -43,10 +51,16 @@ const Convo = ({ lastMsgRef }) => {
 				<p className="chat__msg chat__msg--rxd">
 					<span> This is a random message </span>
 					<span className="chat__time"> 02:55</span>
+					<button aria-label="Message options" className="chat__msg-options">
+						<Icon id="downArrow" className="chat__msg-options-icon" />
+					</button>
 				</p>
 				<p className="chat__msg chat__msg--rxd">
 					<span> This is a random message </span>
 					<span className="chat__time"> 02:55</span>
+					<button aria-label="Message options" className="chat__msg-options">
+						<Icon id="downArrow" className="chat__msg-options-icon" />
+					</button>
 				</p>
 			</div>
 		</>
