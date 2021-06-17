@@ -1,8 +1,5 @@
 import React from "react";
-import emojisList from "emojis-list";
 import Icon from "components/Icon";
-
-const emojis = emojisList.slice(1759, 1900);
 
 const emojiTabs = [
 	{ icon: "recent", label: "Recent emojis", active: true },
@@ -43,31 +40,39 @@ const EmojiTray = ({ showEmojis, newMessage, setNewMessage }) => {
 				<input className="emojis__search" placeholder="Search Emoji" />
 				<h4 className="emojis__label"> Smileys {"&"} People </h4>
 				<div className="emojis__grid">
-					{emojis.map((emoji, index) => (
-						<p
-							role="img"
-							aria-label="emoji"
-							className="emojis__emoji"
-							key={index}
-							onClick={() => addEmoji(emoji)}
-						>
-							{emoji}
-						</p>
-					))}
+					{new Array(6).fill(null).map((_, rowIndex) =>
+						new Array(11).fill(null).map((_, colIndex) => (
+							<div
+								role="img"
+								aria-label="emoji"
+								// onClick={() => addEmoji("emoji")}
+								key={`${rowIndex}-${colIndex}`}
+								className="emoji emojis__emoji"
+								style={{
+									backgroundPositionX: -3 - 44.2 * colIndex,
+									backgroundPositionY: -6 - 52 * rowIndex,
+								}}
+							></div>
+						))
+					)}
 				</div>
 				<h4 className="emojis__label"> Animals {"&"} Nature </h4>
 				<div className="emojis__grid">
-					{emojis.map((emoji, index) => (
-						<p
-							role="img"
-							aria-label="emoji"
-							className="emojis__emoji"
-							key={index}
-							onClick={() => addEmoji(emoji)}
-						>
-							{emoji}
-						</p>
-					))}
+					{new Array(6).fill(null).map((_, rowIndex) =>
+						new Array(11).fill(null).map((_, colIndex) => (
+							<div
+								role="img"
+								aria-label="emoji"
+								// onClick={() => addEmoji("emoji")}
+								key={`${rowIndex}-${colIndex}`}
+								className="emoji emojis__emoji"
+								style={{
+									backgroundPositionX: -3 - 44.2 * colIndex,
+									backgroundPositionY: -6 - 52 * rowIndex,
+								}}
+							></div>
+						))
+					)}
 				</div>
 			</div>
 		</div>

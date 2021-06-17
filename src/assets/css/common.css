@@ -46,6 +46,17 @@
     object-fit: cover;
 }
 
+.emoji {
+    background: url(../../assets/images/emoji-sprite.png) transparent;
+    width: 40px;
+    height: 40px;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-size: 500px;
+}
+
 /* Begin search input  */
 
 .search-wrapper {
