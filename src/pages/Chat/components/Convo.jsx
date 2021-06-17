@@ -1,7 +1,7 @@
 import Icon from "components/Icon";
 import React from "react";
 
-const Convo = () => {
+const Convo = ({ lastMsgRef }) => {
 	return new Array(10).fill(null).map((_, index) => (
 		<>
 			<div className="chat__date-wrapper">
@@ -36,7 +36,10 @@ const Convo = () => {
 					<span className="chat__time"> 02:55</span>
 				</p>
 			</div>
-			<div className="chat__msg-group chat__msg-group--rxd">
+			<div
+				className="chat__msg-group chat__msg-group--rxd"
+				ref={index === 9 ? lastMsgRef : undefined}
+			>
 				<p className="chat__msg chat__msg--rxd">
 					<span> This is a random message </span>
 					<span className="chat__time"> 02:55</span>

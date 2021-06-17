@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./styles.css";
 import EmojiTray from "./components/EmojiTray";
 import ChatInput from "./components/ChatInput";
@@ -14,6 +14,7 @@ const Chat = () => {
 	const [showEmojis, setShowEmojis] = useState(false);
 	const [showProfileSidebar, setShowProfileSidebar] = useState(false);
 	const [showSearchSidebar, setShowSearchSidebar] = useState(false);
+	const lastMsgRef = useRef(null);
 
 	const openSidebar = (cb) => {
 		// close any open sidebar first
@@ -22,6 +23,10 @@ const Chat = () => {
 
 		// call callback fn
 		cb(true);
+	};
+
+	const scrollToLastMsg = () => {
+		lastMsgRef.current.scrollIntoView();
 	};
 
 	return (
@@ -34,10 +39,14 @@ const Chat = () => {
 					openSearchSidebar={() => openSidebar(setShowSearchSidebar)}
 				/>
 				<div className="chat__content">
-					<Convo />
+					<Convo lastMsgRef={lastMsgRef} />
 				</div>
 				<footer className="chat__footer">
-					<button className="chat__scroll-btn" aria-label="scroll down">
+					<button
+						className="chat__scroll-btn"
+						aria-label="scroll down"
+						onClick={scrollToLastMsg}
+					>
 						<Icon id="downArrow" />
 					</button>
 					<EmojiTray showEmojis={showEmojis} />
