@@ -149,7 +149,6 @@
 
 .chat__msg.chat__img-wrapper {
     padding: 4px;
-    padding-bottom: 0;
     width: 95%;
 }
 
@@ -222,7 +221,7 @@
     color: #0DA9E5;
 }
 
-.chat__img-wrapper .chat__msg-footer, .chat__img-wrapper .chat__msg-options-icon {
+.chat__img-wrapper .chat__msg-footer, .chat__img-wrapper .chat__msg-options-icon, .chat__img-wrapper .chat__msg-status-icon {
     color: white;
 }
 

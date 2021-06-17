@@ -37,7 +37,22 @@ const Convo = ({ lastMsgRef, messages: allMessages }) => {
 									>
 										<img src={media} alt="" className="chat__img" />
 										<span className="chat__msg-footer">
-											{formatTime(message.time)}
+											<span>{formatTime(message.time)}</span>
+											{!message.sender && (
+												<Icon
+													id={
+														message?.status === "sent"
+															? "singleTick"
+															: "doubleTick"
+													}
+													aria-label={message?.status}
+													className={`chat__msg-status-icon ${
+														message?.status === "read"
+															? "chat__msg-status-icon--blue"
+															: ""
+													}`}
+												/>
+											)}
 										</span>
 
 										<button
