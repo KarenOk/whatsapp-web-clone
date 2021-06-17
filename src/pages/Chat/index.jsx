@@ -7,6 +7,7 @@ import ChatSidebar from "./components/ChatSidebar";
 import Icon from "components/Icon";
 import Search from "./components/Search";
 import Profile from "./components/Profile";
+import Convo from "./components/Convo";
 
 const Chat = () => {
 	const [showAttach, setShowAttach] = useState(false);
@@ -35,6 +36,7 @@ const Chat = () => {
 					<button className="chat__scroll-btn">
 						<Icon id="downArrow" />
 					</button>
+					<Convo />
 				</div>
 				<footer className="chat__footer">
 					<EmojiTray showEmojis={showEmojis} />
