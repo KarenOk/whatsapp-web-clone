@@ -1,5 +1,4 @@
 import React from "react";
-import avatar from "assets/images/profile-picture-girl-4.jpeg";
 import groupAvatar from "assets/images/women.png";
 import media from "assets/images/placeholder.jpeg";
 import Checkbox from "components/Checkbox";
