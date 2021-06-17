@@ -1,6 +1,7 @@
 import React from "react";
 import Icon from "components/Icon";
 import avatar from "assets/images/profile-picture-girl-4.jpeg";
+import OptionsBtn from "components/OptionsButton";
 
 const Header = ({ openProfileSidebar, openSearchSidebar }) => {
 	return (
@@ -24,9 +25,19 @@ const Header = ({ openProfileSidebar, openSearchSidebar }) => {
 						className="chat__action-icon chat__action-icon--search"
 					/>
 				</button>
-				<button className="chat__action" aria-label="Menu">
-					<Icon id="menu" className="chat__action-icon" />
-				</button>
+				<OptionsBtn
+					className="chat__action"
+					ariaLabel="Menu"
+					iconId="menu"
+					iconClassName="chat__action-icon"
+					options={[
+						"Contact Info",
+						"Select Messages",
+						"Mute notifications",
+						"Clear messages",
+						"Delete chat",
+					]}
+				/>
 			</div>
 		</header>
 	);

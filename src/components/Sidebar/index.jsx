@@ -5,6 +5,7 @@ import Icon from "components/Icon";
 import Alert from "./Alert";
 import Contact from "./Contact";
 import contacts from "data/contacts";
+import OptionsBtn from "components/OptionsButton";
 
 const Sidebar = () => {
 	return (
@@ -23,9 +24,21 @@ const Sidebar = () => {
 					<button className="sidebar__action" aria-label="New chat">
 						<Icon id="chat" className="sidebar__action-icon" />
 					</button>
-					<button className="sidebar__action" aria-label="Menu">
-						<Icon id="menu" className="sidebar__action-icon" />
-					</button>
+					<OptionsBtn
+						className="sidebar__action"
+						ariaLabel="Menu"
+						iconId="menu"
+						iconClassName="sidebar__action-icon"
+						options={[
+							"New group",
+							"Create a room",
+							"Profile",
+							"Archived",
+							"Starred",
+							"Settings",
+							"Log out",
+						]}
+					/>
 				</div>
 			</header>
 			<Alert />
