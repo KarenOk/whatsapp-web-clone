@@ -1,3 +1,4 @@
+@import url(darktheme.css);
 .loader {
     background: rgb(240, 240, 240);
     min-height: 100vh;
