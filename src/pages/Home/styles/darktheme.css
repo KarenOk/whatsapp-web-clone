@@ -1,0 +1,20 @@
+.dark-theme .home {
+    background: rgb(38, 45, 49);
+    border-bottom-color: #056162;
+}
+
+.dark-theme .home__title {
+    color: rgba(241, 241, 242, 0.88);
+}
+
+.dark-theme .home__text {
+    color: rgb(166, 168, 170);
+}
+
+.dark-theme .home__text:first-of-type {
+    border-bottom-color: rgba(241, 241, 242, 0.11);
+}
+
+.dark-theme .home__link {
+    color: rgb(0, 175, 156);
+}
