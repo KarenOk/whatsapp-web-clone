@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./styles.css";
+import "./styles/main.css";
 import EmojiTray from "./components/EmojiTray";
 import ChatInput from "./components/ChatInput";
 import Header from "./components/Header";

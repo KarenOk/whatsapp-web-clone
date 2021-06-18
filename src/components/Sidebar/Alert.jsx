@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles.css";
 import Icon from "components/Icon";
 
 const alerts = [

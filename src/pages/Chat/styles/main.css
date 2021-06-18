@@ -1,3 +1,4 @@
+@import url(./darktheme.css);
 .chat {
     display: flex;
     position: relative;
@@ -20,7 +21,7 @@
     bottom: 0;
     opacity: 0.05;
     z-index: 1;
-    background: url(../../assets/images/bg-chat-light.png) #E4DCD4;
+    background: url(../../../assets/images/bg-chat-light.png) #E4DCD4;
 }
 
 .chat__header, .chat__footer, .chat__date-wrapper, .chat__msg-group, .chat__encryption-msg {

@@ -1,3 +1,4 @@
+@import url(./darktheme.css);
 .sidebar {
     min-width: 300px;
     flex: 40%;
