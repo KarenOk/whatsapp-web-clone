@@ -18,6 +18,11 @@ const ChatInput = ({
 	setNewMessage,
 	submitNewMessage,
 }) => {
+	const detectEnterPress = (e) => {
+		if (e.key === "Enter" || e.keyCode === 13) {
+			submitNewMessage();
+		}
+	};
 	return (
 		<div className="chat__input-wrapper">
 			{showEmojis && (
@@ -72,6 +77,7 @@ const ChatInput = ({
 				placeholder="Type a message"
 				value={newMessage}
 				onChange={(e) => setNewMessage(e.target.value)}
+				onKeyDown={detectEnterPress}
 			/>
 			{newMessage ? (
 				<button aria-label="Send message" onClick={submitNewMessage}>
