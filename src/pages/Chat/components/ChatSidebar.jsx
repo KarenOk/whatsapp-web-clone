@@ -4,7 +4,7 @@ import Icon from "components/Icon";
 const ChatSidebar = ({ active, closeSidebar, heading, children }) => {
 	return (
 		<aside className={`chat-sidebar ${active ? "chat-sidebar--active" : ""}`}>
-			<header className="header">
+			<header className="header chat-sidebar__header">
 				<button onClick={closeSidebar}>
 					<Icon id="cancel" className="chat-sidebar__header-icon" />
 				</button>

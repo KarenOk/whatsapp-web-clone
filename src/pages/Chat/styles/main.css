@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: 1;
 }
 
 .chat__bg {
@@ -30,7 +31,7 @@
 
 .chat__header {
     /* Needed for the options btn to stay on top */
-    z-index: 100;
+    z-index: 20;
 }
 
 /* Chat Header Component  */
