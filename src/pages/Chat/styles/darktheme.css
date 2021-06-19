@@ -76,6 +76,10 @@
     background: rgb(5, 97, 98);
 }
 
+.dark-theme .chat__img-wrapper .chat__msg-options {
+    background: transparent;
+}
+
 /* End Chat Content */
 
 .dark-theme .chat__footer {
