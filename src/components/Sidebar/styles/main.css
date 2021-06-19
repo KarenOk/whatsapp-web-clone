@@ -33,7 +33,7 @@
 /*  Sidebar Alert */
 
 .sidebar__alert {
-    height: 85px;
+    min-height: 85px;
     padding: 20px;
     display: flex;
     align-items: center;
