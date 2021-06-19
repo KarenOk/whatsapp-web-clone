@@ -1,0 +1,202 @@
+.dark-theme .chat__body {
+    border-right-color: #3C4247;
+}
+
+.dark-theme .chat__bg {
+    background: url(../../../assets/images/bg-chat-dark.png) rgb(13, 20, 24);
+}
+
+/* Chat Header Component  */
+
+.dark-theme .chat__contact-name {
+    color: rgba(241, 241, 242, 0.92);
+}
+
+.dark-theme .chat__contact-desc {
+    color: rgba(241, 241, 242, 0.63);
+}
+
+/* End Chat Header Component  */
+
+/* Chat Content */
+
+.dark-theme .chat__content {
+    background: rgb(13, 20, 24);
+}
+
+.dark-theme .chat__action-icon {
+    color: rgb(177, 179, 181)
+}
+
+.dark-theme .chat__date {
+    background: rgb(30, 42, 48);
+    color: rgba(241, 241, 242, 0.92);
+}
+
+.dark-theme .chat__encryption-msg {
+    background: rgb(32, 39, 43);
+    color: rgb(250, 217, 100);
+}
+
+.dark-theme .chat__encryption-icon {
+    color: rgb(250, 217, 100)
+}
+
+.dark-theme .chat__msg {
+    color: rgba(241, 241, 242, 0.95)
+}
+
+.dark-theme .chat__msg--sent {
+    background: rgb(5, 97, 98);
+}
+
+.dark-theme .chat__msg--rxd {
+    background: rgb(38, 45, 49);
+}
+
+.dark-theme .chat__msg-group>*:nth-child(1):not(.chat__msg--sent)::before, .dark-theme .chat__msg--sent+.chat__msg--rxd::before {
+    border-top-color: rgb(38, 45, 49);
+    border-right-color: rgb(38, 45, 49);
+}
+
+.dark-theme .chat__msg-group>*:nth-child(1):not(.chat__msg--rxd)::before, .dark-theme .chat__msg--rxd+.chat__msg--sent::before {
+    border-top-color: rgb(5, 97, 98);
+    border-left-color: rgb(5, 97, 98);
+}
+
+.dark-theme .chat__msg-footer {
+    color: rgba(241, 241, 242, 0.63)
+}
+
+.dark-theme .chat__msg--rxd .chat__msg-options {
+    background: rgb(38, 45, 49);
+}
+
+.dark-theme .chat__msg--sent .chat__msg-options {
+    background: rgb(5, 97, 98);
+}
+
+/* End Chat Content */
+
+.dark-theme .chat__footer {
+    background: rgb(30, 36, 40);
+}
+
+.dark-theme .chat__scroll-btn {
+    background: rgb(38, 45, 49);
+    color: rgb(121, 124, 126);
+}
+
+/* Emoji Tray */
+
+.dark-theme .emojis__tab--active::after {
+    background: rgb(0, 175, 156);
+}
+
+.dark-theme .emojis__tab-icon {
+    color: rgba(241, 241, 242, 0.32);
+}
+
+.dark-theme .emojis__tab--active .emojis__tab-icon {
+    color: rgba(241, 241, 242, 0.63);
+}
+
+.dark-theme .emojis__search {
+    background: rgb(38, 45, 49);
+    color: rgb(212, 213, 215);
+}
+
+.dark-theme .emojis__search::placeholder {
+    color: #7D8184;
+}
+
+.dark-theme .emojis__label {
+    color: rgba(241, 241, 242, 0.45);
+}
+
+/* End Emoji Tray */
+
+/* Chat Footer Toolbar */
+
+.dark-theme .chat__input-icon {
+    color: rgb(130, 134, 137);
+}
+
+.dark-theme .chat__input-icon--highlight {
+    color: rgb(0, 150, 136);
+}
+
+.dark-theme .chat__input {
+    background: rgb(51, 56, 59);
+    color: rgb(241, 241, 242);
+}
+
+/* End Chat Footer Toolbar */
+
+/* Chat Sidebar */
+
+.dark-theme .chat-sidebar__header-icon {
+    color: rgb(130, 134, 137);
+}
+
+.dark-theme .chat-sidebar__heading {
+    color: rgba(241, 241, 242, 0.92);
+}
+
+.dark-theme .chat-sidebar__search-results {
+    background: rgb(19, 28, 33);
+    color: rgba(241, 241, 242, 0.45);
+}
+
+.dark-theme .profile {
+    background: #0D151A;
+}
+
+.dark-theme .profile__section {
+    background: rgb(19, 28, 33);
+    box-shadow: rgba(0, 0, 0, 0.16)0px 1px 3px 0px;
+}
+
+.dark-theme .profile__name {
+    color: rgba(241, 241, 242, 0.92);
+}
+
+.dark-theme .profile__heading {
+    color: rgb(0, 150, 136);
+}
+
+.dark-theme .profile__heading-icon {
+    color: rgb(130, 134, 137);
+}
+
+.dark-theme .profile__action:not(:last-of-type), .dark-theme .profile__about-item:not(:last-of-type), .dark-theme .profile__group:not(:last-of-type) {
+    border-bottom: 1px solid #3C4247;
+}
+
+.dark-theme .profile__action-text--top {
+    color: rgba(241, 241, 242, 0.92);
+}
+
+.dark-theme .profile__action-text--bottom {
+    color: rgba(241, 241, 242, 0.45);
+}
+
+.dark-theme .profile__about-item {
+    color: rgba(241, 241, 242, 0.92);
+}
+
+.dark-theme .profile__group:hover {
+    background-color: #3C4247;
+}
+
+.dark-theme .profile__group-text--top {
+    color: rgba(241, 241, 242, 0.92);
+}
+
+.dark-theme .profile__group-text--bottom {
+    color: rgba(241, 241, 242, 0.45);
+}
+
+.dark-theme .profile__section--danger {
+    color: rgb(239, 105, 122);
+}

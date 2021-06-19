@@ -39,3 +39,11 @@ ul {
 ::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
 }
+
+.dark-theme ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+    background-color: initial;
+}

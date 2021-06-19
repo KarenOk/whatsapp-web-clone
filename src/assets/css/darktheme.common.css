@@ -1,3 +1,7 @@
+.dark-theme .focus-visible {
+    outline: 2px solid rgba(70, 108, 119, 0.3);
+}
+
 .dark-theme .header {
     background: rgb(42, 47, 50)
 }

@@ -100,7 +100,7 @@ const Profile = ({ user }) => {
 			<div className="profile__section profile__section--groups">
 				<div className="profile__heading-wrapper">
 					<h2 className="sb profile__heading profile__group-heading">
-						<span> Groups in common </span> <span> 2</span>
+						<span> Groups in common </span> <span> 3</span>
 					</h2>
 				</div>
 				{groups.map((group) => (

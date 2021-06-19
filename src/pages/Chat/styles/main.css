@@ -143,7 +143,6 @@
     margin-bottom: 12px;
     font-size: 0.85rem;
     color: #000000;
-    background: white;
     width: fit-content;
     max-width: 95%;
     line-height: 20px;
@@ -234,7 +233,6 @@
 .chat__msg-options {
     opacity: 0;
     position: absolute;
-    background: #DBF8C6;
     right: 5px;
     top: 3px;
     pointer-events: none;
