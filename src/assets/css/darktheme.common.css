@@ -1,0 +1,15 @@
+.dark-theme .header {
+    background: rgb(42, 47, 50)
+}
+
+.dark-theme .search-wrapper {
+    background: rgb(19, 28, 33);
+}
+
+.dark-theme .search {
+    background: rgb(50, 55, 57);
+}
+
+.dark-theme .search__back-btn {
+    color: inherit;
+}

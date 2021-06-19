@@ -1,0 +1,73 @@
+.dark-theme .sidebar {
+    border-right-color: #3C4247;
+}
+
+.dark-theme .sidebar__alert--warning {
+    background: #d7a53b;
+}
+
+.dark-theme .sidebar__alert--info {
+    background: #085373;
+}
+
+.dark-theme .sidebar__alert--danger {
+    background: #a7494c;
+}
+
+.dark-theme .sidebar__alert-icon {
+    color: rgba(241, 241, 242, 0.8)
+}
+
+.dark-theme .sidebar__alert-text:first-of-type {
+    color: rgba(241, 241, 242, 0.96)
+}
+
+.dark-theme .sidebar__alert-text:last-of-type {
+    color: rgba(241, 241, 242, 0.75);
+}
+
+.dark-theme .sidebar__alert--warning .sidebar__alert-text:first-of-type {
+    color: rgba(9, 14, 17, 0.96);
+}
+
+.dark-theme .sidebar__alert--warning .sidebar__alert-text:last-of-type {
+    color: rgba(9, 14, 17, 0.75);
+}
+
+.dark-theme .sidebar__contacts {
+    border-top-color: rgb(36, 45, 50);
+    background: rgb(19, 28, 33);
+}
+
+.dark-theme .sidebar-contact {
+    border-bottom-color: #3C4247;
+}
+
+.dark-theme .sidebar-contact:hover {
+    background: #323739;
+}
+
+.dark-theme .sidebar-contact__name {
+    color: rgba(241, 241, 242, 0.92);
+}
+
+.dark-theme .sidebar-contact__time {
+    color: rgba(241, 241, 242, 0.63)
+}
+
+.dark-theme .sidebar-contact__message-wrapper {
+    color: rgba(241, 241, 242, 0.63);
+}
+
+.dark-theme .sidebar-contact__message--unread {
+    color: rgb(212, 213, 215)
+}
+
+.dark-theme .sidebar-contact__icons>* {
+    color: rgba(241, 241, 242, 0.63);
+}
+
+.dark-theme .sidebar-contact__unread {
+    background-color: rgb(0, 175, 156);
+    color: rgb(19, 28, 33);
+}
