@@ -10,7 +10,7 @@ import getRandomSentence from "utils/getRandomSentence";
 const users = [
 	{
 		id: 1,
-		profile_picture: ppGirl1,
+		profile_picture: ppGirl3,
 		name: "Love of my life ❤️💜",
 		phone_number: "+2348123456789",
 		whatsapp_name: "Beyonce",
@@ -206,7 +206,7 @@ const users = [
 	},
 	{
 		id: 3,
-		profile_picture: ppGirl3,
+		profile_picture: ppGirl1,
 		name: "Titilayo Bello",
 		phone_number: "+2348123456789",
 		whatsapp_name: "titi123",
