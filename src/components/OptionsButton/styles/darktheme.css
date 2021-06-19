@@ -1,0 +1,15 @@
+.dark-theme .options-btn--pressed {
+    background: #20272b;
+}
+
+.dark-theme .options-btn__options {
+    background-color: rgb(42, 47, 50);
+}
+
+.dark-theme .options-btn__option {
+    color: rgba(241, 241, 242, 0.92);
+}
+
+.dark-theme .options-btn__option:hover {
+    background: #20272b;
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Icon from "components/Icon";
-import "./styles.css";
+import "./styles/main.css";
 
 const OptionsBtn = ({
 	className,
@@ -9,7 +9,7 @@ const OptionsBtn = ({
 	ariaLabel,
 	options = [],
 	position = "left",
-	showPressed,
+	showPressed = true,
 	...props
 }) => {
 	const [showOptions, setShowOptions] = useState(false);
