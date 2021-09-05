@@ -6,12 +6,15 @@ import reportWebVitals from "./reportWebVitals";
 
 import "./assets/css/index.css";
 import { UsersProvider } from "context/usersContext";
+import { SocketProvider } from "context/socketContext";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<UsersProvider>
-			<App />
-		</UsersProvider>
+		<SocketProvider>
+			<UsersProvider>
+				<App />
+			</UsersProvider>
+		</SocketProvider>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
