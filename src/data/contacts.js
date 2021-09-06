@@ -117,6 +117,7 @@ const users = [
 		},
 		group: false,
 		pinned: true,
+		typing: false,
 	},
 	{
 		id: 2,
@@ -203,6 +204,7 @@ const users = [
 		},
 		group: false,
 		pinned: false,
+		typing: false,
 	},
 	{
 		id: 3,
@@ -307,6 +309,7 @@ const users = [
 		},
 		group: false,
 		pinned: false,
+		typing: false,
 	},
 	{
 		id: 4,
@@ -411,6 +414,7 @@ const users = [
 		},
 		group: false,
 		pinned: false,
+		typing: false,
 	},
 
 	{
@@ -504,6 +508,7 @@ const users = [
 		},
 		group: false,
 		pinned: false,
+		typing: false,
 	},
 	{
 		id: 6,
@@ -608,6 +613,7 @@ const users = [
 		},
 		group: false,
 		pinned: false,
+		typing: false,
 	},
 
 	{
@@ -701,6 +707,7 @@ const users = [
 		},
 		group: false,
 		pinned: false,
+		typing: false,
 	},
 
 	{
@@ -794,6 +801,7 @@ const users = [
 		},
 		group: false,
 		pinned: false,
+		typing: false,
 	},
 ];
 

@@ -17,33 +17,38 @@ const UsersProvider = ({ children }) => {
 		});
 
 		socket.on("start_typing", (data) => {
-			console.log(data.userId, "is typing...");
+			const { userId } = data;
+			_updateUserProp(userId, "typing", true);
 		});
 
 		socket.on("stop_typing", (data) => {
-			console.log(data.userId, "stopped typing");
+			const { userId } = data;
+			_updateUserProp(userId, "typing", false);
 		});
 	}, [socket]);
 
-	const setUserAsUnread = (userId) => {
+	const _updateUserProp = (userId, prop, value) => {
 		let userIndex = users.findIndex((user) => user.id === userId);
 		const temp = [...users];
-		const userObject = users[userIndex];
-		temp[userIndex] = { ...userObject, unread: 0 };
+		const userObject = temp[userIndex];
+		temp[userIndex] = { ...userObject, [prop]: value };
 		setUsers(temp);
+	};
+
+	const setUserAsUnread = (userId) => {
+		_updateUserProp(userId, "unread", 0);
 	};
 
 	const addNewMessage = (userId, message) => {
 		let userIndex = users.findIndex((user) => user.id === userId);
 		const temp = [...users];
-		const userObject = temp[userIndex];
 		const newMsgObject = {
 			content: message,
 			sender: null,
 			time: new Date().toLocaleTimeString(),
 			status: "delivered",
 		};
-		userObject.messages.TODAY.push(newMsgObject);
+		temp[userIndex].messages.TODAY.push(newMsgObject);
 		setUsers(temp);
 
 		socket.emit("fetch_response", { userId });
