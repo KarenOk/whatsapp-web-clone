@@ -56,7 +56,7 @@ const Contact = ({ contact }) => {
 								!!contact.unread ? "sidebar-contact__message--unread" : ""
 							}`}
 						>
-							{lastMessage?.content}
+							{contact.typing ? <i> typing...</i> : lastMessage?.content}
 						</span>
 					</p>
 					<div className="sidebar-contact__icons">

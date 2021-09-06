@@ -31,6 +31,10 @@ const Chat = ({ match, history }) => {
 		}
 	}, []);
 
+	useEffect(() => {
+		user && scrollToLastMsg();
+	}, [users]);
+
 	const openSidebar = (cb) => {
 		// close any open sidebar first
 		setShowProfileSidebar(false);
