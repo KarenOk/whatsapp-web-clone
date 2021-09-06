@@ -29,10 +29,10 @@ const UsersProvider = ({ children }) => {
 
 	const _updateUserProp = (userId, prop, value) => {
 		let userIndex = users.findIndex((user) => user.id === userId);
-		const temp = [...users];
-		const userObject = temp[userIndex];
-		temp[userIndex] = { ...userObject, [prop]: value };
-		setUsers(temp);
+		const usersCopy = [...users];
+		const userObject = usersCopy[userIndex];
+		usersCopy[userIndex] = { ...userObject, [prop]: value };
+		setUsers(usersCopy);
 	};
 
 	const setUserAsUnread = (userId) => {
@@ -41,15 +41,15 @@ const UsersProvider = ({ children }) => {
 
 	const addNewMessage = (userId, message) => {
 		let userIndex = users.findIndex((user) => user.id === userId);
-		const temp = [...users];
+		const usersCopy = [...users];
 		const newMsgObject = {
 			content: message,
 			sender: null,
 			time: new Date().toLocaleTimeString(),
 			status: "delivered",
 		};
-		temp[userIndex].messages.TODAY.push(newMsgObject);
-		setUsers(temp);
+		usersCopy[userIndex].messages.TODAY.push(newMsgObject);
+		setUsers(usersCopy);
 
 		socket.emit("fetch_response", { userId });
 	};
