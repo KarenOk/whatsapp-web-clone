@@ -11,29 +11,35 @@ const UsersProvider = ({ children }) => {
 
 	const [users, setUsers] = useState(contacts);
 
-	useEffect(() => {
-		socket.on("fetch_response", (data) => {
-			console.log("Response", data.response);
-		});
-
-		socket.on("start_typing", (data) => {
-			const { userId } = data;
-			_updateUserProp(userId, "typing", true);
-		});
-
-		socket.on("stop_typing", (data) => {
-			const { userId } = data;
-			_updateUserProp(userId, "typing", false);
-		});
-	}, [socket]);
-
 	const _updateUserProp = (userId, prop, value) => {
-		let userIndex = users.findIndex((user) => user.id === userId);
-		const usersCopy = [...users];
-		const userObject = usersCopy[userIndex];
-		usersCopy[userIndex] = { ...userObject, [prop]: value };
-		setUsers(usersCopy);
+		setUsers((users) => {
+			const usersCopy = [...users];
+			let userIndex = users.findIndex((user) => user.id === userId);
+			const userObject = usersCopy[userIndex];
+			usersCopy[userIndex] = { ...userObject, [prop]: value };
+			return usersCopy;
+		});
 	};
+
+	const setUserAsTyping = (data) => {
+		const { userId } = data;
+		_updateUserProp(userId, "typing", true);
+	};
+
+	const setUserAsNotTyping = (data) => {
+		const { userId } = data;
+		_updateUserProp(userId, "typing", false);
+	};
+
+	const fetchMessageResponse = (data) => {
+		console.log("Response", data.response);
+	};
+
+	useEffect(() => {
+		socket.on("fetch_response", fetchMessageResponse);
+		socket.on("start_typing", setUserAsTyping);
+		socket.on("stop_typing", setUserAsNotTyping);
+	}, [socket]);
 
 	const setUserAsUnread = (userId) => {
 		_updateUserProp(userId, "unread", 0);
@@ -48,13 +54,12 @@ const UsersProvider = ({ children }) => {
 			time: new Date().toLocaleTimeString(),
 			status: "delivered",
 		};
+
 		usersCopy[userIndex].messages.TODAY.push(newMsgObject);
 		setUsers(usersCopy);
 
 		socket.emit("fetch_response", { userId });
 	};
-
-	const fetchMessageResponse = () => {};
 
 	return (
 		<UsersContext.Provider value={{ users, setUserAsUnread, addNewMessage }}>
