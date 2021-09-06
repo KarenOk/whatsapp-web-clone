@@ -32,7 +32,22 @@ const UsersProvider = ({ children }) => {
 	};
 
 	const fetchMessageResponse = (data) => {
-		console.log("Response", data.response);
+		setUsers((users) => {
+			const { userId, response } = data;
+
+			let userIndex = users.findIndex((user) => user.id === userId);
+			const usersCopy = JSON.parse(JSON.stringify(users));
+			const newMsgObject = {
+				content: response,
+				sender: userId,
+				time: new Date().toLocaleTimeString(),
+				status: null,
+			};
+
+			usersCopy[userIndex].messages.TODAY.push(newMsgObject);
+
+			return usersCopy;
+		});
 	};
 
 	useEffect(() => {
