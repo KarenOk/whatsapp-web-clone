@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import "./styles/main.css";
 import avatar from "assets/images/profile-picture-girl-1.jpeg";
 import Icon from "components/Icon";
@@ -9,6 +9,13 @@ import { useUsersContext } from "context/usersContext";
 
 const Sidebar = () => {
 	const { users: contacts } = useUsersContext();
+	const [search, setSearch] = useState('');
+
+	const filteredContacts = useMemo(() => {
+		if (!search) {return contacts};
+		return contacts.filter(c => c.name.toLowerCase().search(search.toLowerCase()) > -1)
+	}, [contacts, search]);
+
 	return (
 		<aside className="sidebar">
 			<header className="header">
@@ -50,13 +57,20 @@ const Sidebar = () => {
 						<Icon id="back" />
 					</button>
 				</div>
-				<input className="search" placeholder="Search or start a new chat" />
+				<input className="search" placeholder="Search or start a new chat" value={search} onChange={e => setSearch(e.target.value)}/>
 			</div>
+		{ filteredContacts.length > 0 ? (
 			<div className="sidebar__contacts">
-				{contacts.map((contact, index) => (
-					<Contact key={index} contact={contact} />
-				))}
+			{filteredContacts.map((contact, index) => (
+				<Contact key={index} contact={contact} />
+			))}
+		</div>
+		): (
+			<div className="sidebar__empty-contacts">
+				No contacts found
 			</div>
+		)}
+			
 		</aside>
 	);
 };
