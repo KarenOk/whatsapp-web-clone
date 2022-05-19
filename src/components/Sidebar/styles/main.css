@@ -101,6 +101,11 @@
     border-top: 1px solid #DADADA;
 }
 
+.sidebar__empty-contacts {
+   text-align: center;
+    padding: 48px 16px; 
+}
+
 .sidebar-contact {
     height: 72px;
     padding: 10px 20px;
