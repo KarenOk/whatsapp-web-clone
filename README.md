@@ -4,6 +4,19 @@ Clone of the current Whatsapp Web UI. Check out its [backend service here](https
 
 Built with React and Socket.IO .
 
+---
+
+## Features
+
+### Chats overview
+![](https://i.ibb.co/y6DB6g8/wc-default.png)
+
+### Messages
+![](https://i.ibb.co/2hyr8VN/wc-chat.png)
+
+### Profile details
+![](https://i.ibb.co/M7vKDm6/wc-profile.png)
+
 ## Run this project locally
 
 1. Download and Install Node JS from https://nodejs.org/en/download/
