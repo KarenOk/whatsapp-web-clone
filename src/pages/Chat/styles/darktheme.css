@@ -54,12 +54,14 @@
     background: rgb(38, 45, 49);
 }
 
-.dark-theme .chat__msg-group>*:nth-child(1):not(.chat__msg--sent)::before, .dark-theme .chat__msg--sent+.chat__msg--rxd::before {
+.dark-theme .chat__msg-group>*:nth-child(1):not(.chat__msg--sent)::before,
+.dark-theme .chat__msg--sent+.chat__msg--rxd::before {
     border-top-color: rgb(38, 45, 49);
     border-right-color: rgb(38, 45, 49);
 }
 
-.dark-theme .chat__msg-group>*:nth-child(1):not(.chat__msg--rxd)::before, .dark-theme .chat__msg--rxd+.chat__msg--sent::before {
+.dark-theme .chat__msg-group>*:nth-child(1):not(.chat__msg--rxd)::before,
+.dark-theme .chat__msg--rxd+.chat__msg--sent::before {
     border-top-color: rgb(5, 97, 98);
     border-left-color: rgb(5, 97, 98);
 }
@@ -173,7 +175,9 @@
     color: rgb(130, 134, 137);
 }
 
-.dark-theme .profile__action:not(:last-of-type), .dark-theme .profile__about-item:not(:last-of-type), .dark-theme .profile__group:not(:last-of-type) {
+.dark-theme .profile__action:not(:last-of-type),
+.dark-theme .profile__about-item:not(:last-of-type),
+.dark-theme .profile__group:not(:last-of-type) {
     border-bottom: 1px solid #3C4247;
 }
 

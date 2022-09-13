@@ -1,4 +1,5 @@
 @import url(./darktheme.css);
+
 .sidebar {
     min-width: 300px;
     flex: 40%;
@@ -75,7 +76,8 @@
     line-height: 17px;
 }
 
-.sidebar__alert--danger .sidebar__alert-text:first-of-type, .sidebar__alert--danger .sidebar__alert-text:last-of-type {
+.sidebar__alert--danger .sidebar__alert-text:first-of-type,
+.sidebar__alert--danger .sidebar__alert-text:last-of-type {
     color: white;
 }
 
@@ -125,13 +127,16 @@
     flex: 1;
 }
 
-.sidebar-contact__top-content, .sidebar-contact__bottom-content, .sidebar-contact__message-wrapper {
+.sidebar-contact__top-content,
+.sidebar-contact__bottom-content,
+.sidebar-contact__message-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.sidebar-contact__name, .sidebar-contact__message {
+.sidebar-contact__name,
+.sidebar-contact__message {
     flex: 1;
     overflow: hidden;
     white-space: nowrap;
@@ -174,7 +179,8 @@
     font-weight: 500;
 }
 
-.sidebar-contact__icons, .sidebar-contact:not(:focus) .sidebar-contact__icons {
+.sidebar-contact__icons,
+.sidebar-contact:not(:focus) .sidebar-contact__icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,6 +218,7 @@
     .sidebar {
         flex: 35%;
     }
+
     .sidebar~div {
         flex: 65%;
     }
@@ -221,6 +228,7 @@
     .sidebar {
         flex: 30%;
     }
+
     .sidebar~div {
         flex: 70%;
     }
