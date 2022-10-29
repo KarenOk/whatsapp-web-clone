@@ -64,6 +64,8 @@ const UsersProvider = ({ children }) => {
     socket.on("fetch_response", fetchMessageResponse);
     socket.on("start_typing", setUserAsTyping);
     socket.on("stop_typing", setUserAsNotTyping);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [socket]);
 
   const setUserAsUnread = (userId) => {

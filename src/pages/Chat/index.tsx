@@ -29,10 +29,14 @@ const Chat = ({ match, history }) => {
       scrollToLastMsg();
       setUserAsUnread(user.id);
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     user && scrollToLastMsg();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [users]);
 
   const openSidebar = (cb) => {
