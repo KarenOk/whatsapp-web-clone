@@ -14,7 +14,7 @@ const Contact = ({ contact }) => {
 		return lastMessage;
 	};
 
-	const lastMessage = getLastMessage(contact);
+	const lastMessage = getLastMessage();
 
 	return (
 		<Link
