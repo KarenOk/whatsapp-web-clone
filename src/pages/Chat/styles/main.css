@@ -1,4 +1,5 @@
 @import url(./darktheme.css);
+
 .chat {
     display: flex;
     position: relative;
@@ -25,7 +26,11 @@
     background: url(../../../assets/images/bg-chat-light.png) #E4DCD4;
 }
 
-.chat__header, .chat__footer, .chat__date-wrapper, .chat__msg-group, .chat__encryption-msg {
+.chat__header,
+.chat__footer,
+.chat__date-wrapper,
+.chat__msg-group,
+.chat__encryption-msg {
     z-index: 10;
 }
 
@@ -48,7 +53,8 @@
     cursor: pointer;
 }
 
-.chat__contact-name, .chat__contact-desc {
+.chat__contact-name,
+.chat__contact-desc {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -171,7 +177,8 @@
     align-self: flex-start;
 }
 
-.chat__msg-group>*:nth-child(1):not(.chat__msg--sent)::before, .chat__msg--sent+.chat__msg--rxd::before {
+.chat__msg-group>*:nth-child(1):not(.chat__msg--sent)::before,
+.chat__msg--sent+.chat__msg--rxd::before {
     content: "";
     position: absolute;
     width: 0;
@@ -184,7 +191,8 @@
     border-left: 6px solid transparent;
 }
 
-.chat__msg-group>*:nth-child(1):not(.chat__msg--rxd)::before, .chat__msg--rxd+.chat__msg--sent::before {
+.chat__msg-group>*:nth-child(1):not(.chat__msg--rxd)::before,
+.chat__msg--rxd+.chat__msg--sent::before {
     right: -8px;
     content: "";
     position: absolute;
@@ -230,7 +238,9 @@
     color: #0DA9E5;
 }
 
-.chat__img-wrapper .chat__msg-footer, .chat__img-wrapper .chat__msg-options-icon, .chat__img-wrapper .chat__msg-status-icon {
+.chat__img-wrapper .chat__msg-footer,
+.chat__img-wrapper .chat__msg-options-icon,
+.chat__img-wrapper .chat__msg-status-icon {
     color: white;
 }
 
@@ -569,7 +579,8 @@
     width: 32%;
 }
 
-.profile__action, .profile__about-item {
+.profile__action,
+.profile__about-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -578,7 +589,9 @@
     cursor: pointer;
 }
 
-.profile__action:not(:last-of-type), .profile__about-item:not(:last-of-type), .profile__group:not(:last-of-type) {
+.profile__action:not(:last-of-type),
+.profile__about-item:not(:last-of-type),
+.profile__group:not(:last-of-type) {
     border-bottom: 1px solid #EBEBEB;
 }
 
@@ -590,7 +603,8 @@
     display: block;
 }
 
-.profile__action-text--top, .profile__about-item {
+.profile__action-text--top,
+.profile__about-item {
     font-weight: 500;
     margin-bottom: 5px;
 }
@@ -605,7 +619,8 @@
     padding-right: 0;
 }
 
-.profile__group, .profile__group-heading {
+.profile__group,
+.profile__group-heading {
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -699,6 +714,7 @@
         height: 100%;
         z-index: 10;
     }
+
     .chat-sidebar--active {
         transform: translateX(0);
         transition: transform 0.1s ease;
